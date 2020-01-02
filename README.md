@@ -7,5 +7,3 @@ Følgende prosjekter er definert:
 * __minegenkode__: Her kan du lagre din egen kode, som ikke nødvendigvis har noe med faget å gjøre
 * __lf__: Her kommer løsningsforslag for øvingene
 * __ovinger__: Her skal du skrive kode for øvingene i faget. Tester for øvingene kommer også her.
-
-
