@@ -1,0 +1,17 @@
+// output folders
+bin/
+target/
+/.metadata/
+.idea/
+.DS_Store
+
+// temporary generated files
+*.xtendbin
+*._trace
+
+
+# Eclipse Core      
+.project
+.settings/
+# JDT-specific (Eclipse Java Development Tools)     
+.classpath
