@@ -17,9 +17,7 @@ __Øvingskrav__:
 
 ## NB: Viktig beskjed!
 
-For å få testene og eventuell kode til øvingene lokalt brukes systemet git. I Eclipse kan du klikke på Git --> Pull i menylinja for å hente den nye øvinga ved hjelp av dette.
-
-Noen kan få et problem med en såkalt merge conflict på en ovinger/.classpath-fil når de prøver å pulle øvingene. Om dette skjer anbefaler vi å å følge kunngjøringen på Blackboard som sier hvordan du kan fikse dette problemet. 
+For å få testene og eventuell kode til øvingene lokalt brukes systemet git. I Eclipse kan du klikke på Git --> Pull i menylinja for å hente den nye øvingen ved hjelp av dette. Om du ikke har denne i menylinjen, er det også mulig å høyreklikke på en av prosjektmappene og velge Team --> Pull.
 
 ## Dette må du gjøre
 
