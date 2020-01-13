@@ -6,6 +6,7 @@ public class RegneMetoderOrig {
 	int a, b;
 	
 	// har ikke public eller slik først? Det kommer om det neste uke!
+	// (Da synes metoden for alle klassene i den samme pakken)
 	int leggSammen() {
 		return a+b;
 	}
@@ -13,7 +14,6 @@ public class RegneMetoderOrig {
 	int gang() {
 		return a*b;
 	}
-	
 	
 	
 	public RegneMetoderOrig(int a, int b) {
