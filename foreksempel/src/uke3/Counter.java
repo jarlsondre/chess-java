@@ -13,7 +13,7 @@ class Counter {
 		end = i;
 	}
 	
-	private int getCounter() {
+	int getCounter() {
 		return counter;
 	}
 
@@ -69,7 +69,7 @@ class Counter {
 			System.out.println(c2.getCounter());
 		}
 		
-		// Følgende kode går til evig tid. Kan dere finne ut hva som er galt, og fikse det?
+		// Kan dere finne ut hva som er galt her, og fikse det?
 			Counter c3 = new Counter(8);
 //			while (c3.count() == false) {
 //				System.out.println(c3.count(3));
