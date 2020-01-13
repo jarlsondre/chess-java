@@ -29,11 +29,11 @@ public class Regne {
 	public static void main(String[] args) {
 		// Her lager vi et objekt som settes i en viss tilstand. Da blir pluss og gang
 		// det samme hver gang, en kan ikke endre tilstanden heller. 
-		System.out.println("Første Regne");
+		System.out.println("Første objekt Regne");
 		Regne r = new Regne(3,5);
 		System.out.println(r.gang());
 		System.out.println(r.pluss());
-		System.out.println("Andre Regne");
+		System.out.println("Andre objekt Regne");
 		Regne r2 = new Regne(4,6);
 		System.out.println(r2.gang());
 		System.out.println(r2.pluss());
