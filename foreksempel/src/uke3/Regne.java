@@ -2,6 +2,7 @@ package uke3;
 
 public class Regne {
 
+	// De to tallene:
 	int a, b;
 	
 	
