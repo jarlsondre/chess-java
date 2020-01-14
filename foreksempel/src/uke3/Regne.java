@@ -50,6 +50,10 @@ public class Regne {
 		System.out.println("a og b er parametre:");
 		System.out.println(r.gang(3,4));
 		System.out.println(r.pluss(3,4));		
+		
+		// Hvis jeg gjør en metode static, da er den en metode som kalles på KLASSEN
+		// og ikke hvert enkelt OBJEKT. Da trenger en ikke lage et objekt for å bruke den:
+		System.out.println("Ingen objekter, men virker allikevel: "+Regne.pluss(7, 8));
 
 
 	
@@ -78,7 +82,7 @@ public class Regne {
 	 * men bare brukt objektene for utregningsmetodene de hadde.
 	 */
 	
-	int pluss(int a, int b) {
+	static int pluss(int a, int b) {
 		return a+b;
 	}
 	
