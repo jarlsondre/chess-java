@@ -38,7 +38,7 @@ class Counter {
 		else {
 			counter += inc;
 			return false;
-			// Ser dere hva som blir feil her? Kan dere fikse feilen selv?
+			// Ser dere hva som blir feil her? Kan dere fikse feilene selv?
 		}
 	}
 	/*
