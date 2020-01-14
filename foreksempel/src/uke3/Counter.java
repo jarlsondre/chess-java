@@ -30,9 +30,7 @@ class Counter {
 	}
 	
 	/**
-	 * Her (mener jeg) at kravet som står beskrevet er:
-	 * Hvis nåværende status pluss inc til sammen blir mindre enn
-	 * eller likt som end, da legger vi til inc og returnerer true. 
+	 * Vi kan jo starte med å lage den akkurat som når en skal gå opp med 1.	
 	 */
 	boolean count(int inc) {
 		if (counter == end)
@@ -40,9 +38,7 @@ class Counter {
 		else {
 			counter += inc;
 			return false;
-			// Ser dere hva som blir feil her? Du kan risikere å gå OVER end. 
-			// Da vil counter fremdeles være ulik fra en, så koden vil
-			// fortsette å snurre. Kan dere fikse feilen selv?
+			// Ser dere hva som blir feil her? Kan dere fikse feilen selv?
 		}
 	}
 	/*
