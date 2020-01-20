@@ -76,11 +76,11 @@ public class Bok {
 
 
 	// Konstruktøren. En vet alltid hva tittelen er, og hvor mange sider den har.
-	public Bok(String tittel, int sider) {
+	public Bok(String tmptittel, int sider) {
 		super();
 		System.out.println("Her er jeg"); // dette skrives ut to ganger!
-		this.tittel = tittel;
-		this.sider = sider;
+		tittel = tmptittel; // En måte å separere objektets og Konstruktørens tittel
+		this.sider = sider; // En annen måte. Samme navn, men separerer med this for objektet
 	}
 
 	// Den tomme konstruktøren kaller rett og slett bare den andre med et sett standardverdier.
