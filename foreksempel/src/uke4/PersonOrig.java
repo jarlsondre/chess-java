@@ -1,5 +1,11 @@
 package uke4;
 
+/**
+ * En superenkel Personklasse som vi skal stappe inn i biler.
+ * Dersom det er plass.
+ * @author borgeha
+ *
+ */
 public class PersonOrig {
 
 	String name;
@@ -10,7 +16,6 @@ public class PersonOrig {
 	public String getName() {
 		return name;
 	}
-
 
 
 	public int getAge() {

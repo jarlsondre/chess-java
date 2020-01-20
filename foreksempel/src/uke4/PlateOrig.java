@@ -5,6 +5,13 @@ import static org.junit.Assert.assertFalse;
 
 import java.util.regex.Pattern;
 
+/**
+ * Bilskilt kunne kanskje ha blitt lagret som en variabel i bilen,
+ * men dette er mye finere. Får også frem validering av regnr.
+ * Viser frem testing med if, men også JUnit. Det er penere.
+ * @author borgeha
+ *
+ */
 public class PlateOrig {
 
 	private String sign;

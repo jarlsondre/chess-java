@@ -15,7 +15,8 @@ public class CarOrig {
 	List<PersonOrig> hikers = new ArrayList<>();
 
 	public boolean addHiker(PersonOrig person) {
-		// Må sjekke seats - 1, siden vi har en fører...
+		// Må sjekke seats - 1, siden vi jo har en fører. 
+		// Eller kanskje vi må sjekke OM vi har - deres oppgave! 
 		if (hikers.size() == seats -1 ) {
 			System.out.println("Denna bilen er full, "+person.getName()+
 					" fikk ikke plass!");

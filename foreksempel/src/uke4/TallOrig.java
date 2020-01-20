@@ -26,7 +26,7 @@ public class TallOrig {
 	
 
 	public int getSquare() {
-		int i = Integer.parseInt(tall);
+		int i = this.getTall();
 		return i*i;
 	}
 	

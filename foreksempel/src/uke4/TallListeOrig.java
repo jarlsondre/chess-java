@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class TallListeOrig {
 
-	private List<Character> liste;
+	private List<Character> liste; // Hæ! Ok, det kan gjøres.
 
 
 	// En kan gjerne passe på å bare gjøre operasjoner en plass,
