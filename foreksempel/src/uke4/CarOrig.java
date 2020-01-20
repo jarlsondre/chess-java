@@ -90,15 +90,21 @@ public class CarOrig {
 
 		// En kan også legge inn nye objekter direkte
 		car1.addHiker(new PersonOrig("Hans", 5));
-		car1.addHiker(new PersonOrig("Gunn", 35));
-		car1.addHiker(new PersonOrig("Fårjegplass", 5));
+		car1.addHiker(new PersonOrig("Gunn", 60));
+		car1.addHiker(new PersonOrig("Fårjegplass", 2));
 		car1.addHiker(new PersonOrig("Fårjegplass2", 35));
 		car1.removeHiker(per);
 		car1.addHiker(new PersonOrig("Fårjegplass2", 35));
 
+		System.out.println("\ncar1 ser nå slik ut:");
 		System.out.println(car1);
 		
-		car1.hikers.stream().map(PersonOrig::getAge).forEach(s -> System.out.println(s+" "));
+		// Dette er senere pensum - streams. Se så enkelt en kan skrive ut 
+		// passasjerer, sortert med yngst først. Men det KOMMER SENERE! :)
+		System.out.println("Eksempel på hva en skal lære i kurset: streams med noe ekstra:");
+		car1.hikers.stream()
+			.sorted((p1, p2) -> Integer.compare(p1.getAge(),p2.getAge()))
+			.forEach(System.out::println);;
 	}
 
 }
