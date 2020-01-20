@@ -75,7 +75,7 @@ public class Bok {
 	}
 
 
-	// Konstruktøren.
+	// Konstruktøren. En vet alltid hva tittelen er, og hvor mange sider den har.
 	public Bok(String tittel, int sider) {
 		super();
 		System.out.println("Her er jeg"); // dette skrives ut to ganger!
@@ -85,6 +85,7 @@ public class Bok {
 
 	// Den tomme konstruktøren kaller rett og slett bare den andre med et sett standardverdier.
 	// Teit med tanke på at det er bøker, men finn på noe bedre selv! ;)
+	// Den tomme konstruktøren her er kun til for å vise at man kan ha flere, og kalle en annen.
 	public Bok() {
 		this("Java for dummies", 345);
 	}
