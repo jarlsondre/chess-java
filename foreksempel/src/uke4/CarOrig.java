@@ -64,7 +64,7 @@ public class CarOrig {
 			return true;
 		}
 		else
-			System.out.println(driver.getName()+" er ikke gammel nok til å kjøre.");
+			System.out.println(driver.getName()+" er ikke gammel nok til å kjøre!");
 		return false;
 	}
 
