@@ -88,7 +88,7 @@ public class CarOrig {
 		// En kan legge inn eksisterende objekter
 		car1.addHiker(per);
 
-		// En kan også legge inn nye objekter direkte
+		// En kan også legge inn nye objekter direkte.
 		car1.addHiker(new PersonOrig("Hans", 5));
 		car1.addHiker(new PersonOrig("Gunn", 60));
 		car1.addHiker(new PersonOrig("Fårjegplass", 2));
