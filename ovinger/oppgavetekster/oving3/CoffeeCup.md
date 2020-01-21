@@ -20,3 +20,18 @@ Et **CoffeeCup**-objekt inneholder kapasitet og nåværende volum av kaffe.
 I denne oppgaven blir en implementasjon av **CoffeeCup** sammen med et hovedprogram utdelt, men i implementasjonen av hovedprogrammet har vi plantet noen feil. Det er to oppgaver som må løses.
 
 CoffeeCup-koden finner du i [src/debugging/CoffeeCup.Java](../../src/debugging/CoffeeCup.java). CoffeeCupProgram finner du i [src/debugging/CoffeeCupProgram.java](../../src/debugging/CoffeeCupProgram.java).
+
+### Leseliste
+- [Debugging i Eclipse](https://www.ntnu.no/wiki/display/tdt4100/Bruk+av+debuggeren+i+Eclipse) - Debuggeren er et verktøy som brukes til å analysere kjørende kode, noe som kan være svært nyttig når man vil forstå og evt. rette feil i et program.
+- [Hovedprogramklasser](https://www.ntnu.no/wiki/display/tdt4100/Hovedprogramklasser) - Hovedprogramklasser er klasser som aktiveres når programmer starter opp og som initialiserer og kontrollerer/koordinerer de andre objekter i applikasjonen.
+- [java.util.Random](https://docs.oracle.com/javase/8/docs/api/java/util/Random.html) - En pseudotilfeldig nummergenerator i Java.
+
+### Oppgave 1
+Målet for oppgaven er å finne en feil i funksjonen `part1()` ved hjelp av debuggeren i Eclipse. Kjør hovedprogrammet i debug-modus, og bruk dette til å finne hva kapasiteten og nåværende volum av kaffe er like før programmet utløser et unntak. 
+
+Finn også ut hvilken metode i **CoffeeCup** som utløser unntaket.
+
+### Oppgave 2
+Du fant feilen i oppgave 1, bra! Kommentér ut kallet til `part1()` i hovedprogrammet, så slipper vi å ha mer med det å gjøre.
+
+Du skal nå finne ut hvordan nåverende volum av kaffe endrer seg i `part2()`, før programmet utløser et unntak. Lag en liste over hvilke verdier nivået har. Hvilken metode i **CoffeeCup** utløser et unntak denne gangen? Hvilken type unntak blir utløst?
