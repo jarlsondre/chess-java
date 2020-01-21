@@ -42,13 +42,13 @@ Tilstanden i `RPNCalc`-objekter velger du selv, men det er naturlig å bruke en 
 
 __Del 1 - Tilstandsdiagram__
 
-Tegn objekttilstandsdiagram for en tenkt bruk av RPNCalc-klassen. Velg selv passende start-tilstand og sekvens av kall.
+Tegn [objekttilstandsdiagram](https://www.ntnu.no/wiki/display/tdt4100/Objekttilstandsdiagrammer) for en tenkt bruk av `RPNCalc`-klassen. Velg selv passende start-tilstand og sekvens av kall.
 
 __Del 2 - Java-kode__
 
 Skriv Java-kode for `RPNCalc`-klassen med oppførsel som er beskrevet over. Du skal bruke synlighetsmodifikatorer på metoder og felt for å gjøre innkapslingen "vanntett".
 
-Lag en main-metode, hvor du tester sekvenser av operander og operatorer, og kaller henholdsvis `push` og `performOperation`-metodene på et `RPNCalc`-objekt og skriver ut stacken. Test `RPNCalc`-klassen og sjekk at oppførselen stemmer med tilstandsdiagrammet.
+Lag en [main-metode](https://www.ntnu.no/wiki/display/tdt4100/Main-metoden), hvor du tester sekvenser av operander og operatorer, og kaller henholdsvis `push` og `performOperation`-metodene på et `RPNCalc`-objekt og skriver ut stacken. Test `RPNCalc`-klassen og sjekk at oppførselen stemmer med tilstandsdiagrammet.
 
 __Del 3 - Teori__
 
