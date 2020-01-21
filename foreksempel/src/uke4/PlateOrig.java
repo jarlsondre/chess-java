@@ -2,6 +2,7 @@ package uke4;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.util.regex.Pattern;
 
@@ -45,16 +46,10 @@ public class PlateOrig {
 
 	// Vi kan gjøre om checkSign til en static, med andre ord en funksjon 
 	static boolean staticCheckSign(String sign) {
-		//		boolean ok = true;
-		if (sign.length() != 7) return false;
-		String chars = sign.substring(0, 2);
-		String nums = sign.substring(2);
 		// Her bruker jeg regex - ikke akkurat pensum, men bare såååå effektivt.
 		// https://en.wikipedia.org/wiki/Regular_expression
-		if ((Pattern.matches("[a-zA-Z]+", chars) == true && chars.length() == 2) &&
-				Pattern.matches("[0-9]+", nums) == true && nums.length() == 5) {
+		if (Pattern.matches("[A-Z]{2}[0-9]{5}", sign))
 			return true;
-		}
 		return false;
 	}
 
@@ -82,8 +77,9 @@ public class PlateOrig {
 		assertEquals("AA38143", p1.getSign());
 //		assertEquals("AA38543", p1.getSign()); // Se hva den sier når koden kjøres!
 		
-		// En kan sjekke om noe er sant eller ikke:
+		// En kan sjekke om noe er sant eller ikke, med kall på statisk metode:
 		assertFalse(PlateOrig.staticCheckSign("A56612"));
+		assertTrue(PlateOrig.staticCheckSign("XX10002"));
 
 		// Hva hvis en forsøker å lage et skilt som ikke har riktig format? 
 		//		Plate p2 = new Plate("AAB8143");

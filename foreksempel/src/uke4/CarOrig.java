@@ -100,11 +100,12 @@ public class CarOrig {
 		System.out.println(car1);
 		
 		// Dette er senere pensum - streams. Se så enkelt en kan skrive ut 
-		// passasjerer, sortert med yngst først. Men det KOMMER SENERE! :)
+		// passasjerer over 17, sortert med yngst først. Men det KOMMER SENERE! :)
 		System.out.println("Eksempel på hva en skal lære i kurset: streams med noe ekstra:");
 		car1.hikers.stream()
+			.filter(p -> p.getAge()>= 18)
 			.sorted((p1, p2) -> Integer.compare(p1.getAge(),p2.getAge()))
-			.forEach(System.out::println);;
+			.forEach(System.out::println);
 	}
 
 }
