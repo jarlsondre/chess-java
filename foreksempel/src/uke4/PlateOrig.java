@@ -36,16 +36,10 @@ public class PlateOrig {
 	 * @return true dersom regnr er reelt, false ellers.
 	 */
 	boolean checkSign(String sign) {
-		//		boolean ok = true;
-		if (sign.length() != 7) return false;
-		String chars = sign.substring(0, 2);
-		String nums = sign.substring(2);
 		// Her bruker jeg regex - ikke akkurat pensum, men bare sееее effektivt.
 		// https://en.wikipedia.org/wiki/Regular_expression
-		if ((Pattern.matches("[A-Z][A-Z]", chars) == true) &&
-				Pattern.matches("[0-9]+", nums) == true && nums.length() == 5) {
+		if (Pattern.matches("[A-Z]{2}[0-9]{5}", sign))
 			return true;
-		}
 		return false;
 	}
 
