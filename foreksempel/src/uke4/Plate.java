@@ -62,7 +62,7 @@ public class Plate {
 
 
 	public static void main(String[] args) {
-		Plate p = new Plate("AA41382");
+		Plate p = new Plate("AA41381");
 		if (!p.getSign().equals("AA41383")) {
 			System.out.println("Skulle vært AA41383, var" + p.getSign());
 		}
