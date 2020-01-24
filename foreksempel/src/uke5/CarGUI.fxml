@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.CarController">
+   <children>
+      <Button fx:id="button" layoutX="217.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleCLick" text="Legg inn" />
+      <TextField fx:id="name" layoutX="22.0" layoutY="30.0" prefHeight="25.0" prefWidth="129.0" />
+      <TextField fx:id="age" layoutX="158.0" layoutY="30.0" prefHeight="25.0" prefWidth="48.0" />
+      <Label layoutX="22.0" layoutY="14.0" text="Navn:" />
+      <Label layoutX="158.0" layoutY="14.0" text="Alder:" />
+      <Label fx:id="carLabel" layoutX="23.0" layoutY="76.0" prefHeight="111.0" prefWidth="258.0" text="Bilinfo:" />
+   </children>
+</AnchorPane>
