@@ -37,4 +37,9 @@ public class Counter {
 		System.out.println(c.count(2));
 	}
 
+	int getCounter() {
+		// TODO Auto-generated method stub
+		return counter;
+	}
+
 }
