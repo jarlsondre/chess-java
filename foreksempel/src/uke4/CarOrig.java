@@ -2,9 +2,6 @@ package uke4;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-
-import of4.CountingGame;
 
 public class CarOrig {
 
