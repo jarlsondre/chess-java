@@ -8,6 +8,10 @@ import javafx.scene.control.TextField;
 public class CarController {
 
 	@FXML
+	TextField driverName;
+	@FXML
+	TextField driverAge;
+	@FXML
 	TextField name;
 	@FXML
 	TextField age;
@@ -16,21 +20,38 @@ public class CarController {
 	@FXML
 	Label carLabel;
 	
-	Car2 car2 = new Car2("MX34323",2);
+	Car car = new Car("MX34323",3);
 	
-	public void handleCLick() {
+	public void handleHCLick() {
 		int tmpage = Integer.parseInt(age.getText());
 		Person p = new Person(name.getText(),tmpage);
-		car2.placePerson(p);
-		carLabel.setText(car2.toString());
-		if (car2.isFull())
+		car.addHiker(p);
+		carLabel.setText(car.toString());
+		
+		// Jeg har lyst til å sette knappen til uvirksom dersom det er fullt i bilen.
+		if (car.isFull()) {
 			button.setDisable(true);
+			carLabel.setText("Bilen er full!\n"+carLabel.getText());
+		}
 	}
-	
+
+	public void handleDCLick() {
+		int tmpage = Integer.parseInt(driverAge.getText());
+		Person p = new Person(driverName.getText(),tmpage);
+		car.setDriver(p);
+		carLabel.setText(car.toString());
+		
+		// Jeg har lyst til å sette knappen til uvirksom dersom det er fullt i bilen.
+		if (car.isFull()) {
+			button.setDisable(true);
+			carLabel.setText("Bilen er full!\n"+carLabel.getText());
+		}
+	}
+
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Car c = new Car("AA34533", 4);
+		System.out.println(c);
 	}
 
 }

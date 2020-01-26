@@ -5,13 +5,18 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.CarController">
+<AnchorPane prefHeight="200.0" prefWidth="336.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uke5.CarController">
    <children>
-      <Button fx:id="button" layoutX="217.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleCLick" text="Legg inn" />
-      <TextField fx:id="name" layoutX="22.0" layoutY="30.0" prefHeight="25.0" prefWidth="129.0" />
-      <TextField fx:id="age" layoutX="158.0" layoutY="30.0" prefHeight="25.0" prefWidth="48.0" />
-      <Label layoutX="22.0" layoutY="14.0" text="Navn:" />
-      <Label layoutX="158.0" layoutY="14.0" text="Alder:" />
-      <Label fx:id="carLabel" layoutX="23.0" layoutY="76.0" prefHeight="111.0" prefWidth="258.0" text="Bilinfo:" />
+      <Label fx:id="carLabel" layoutX="14.0" layoutY="123.0" prefHeight="56.0" prefWidth="306.0" text="Bilinfo:" wrapText="true" />
+      <Button fx:id="button" layoutX="228.0" layoutY="94.0" mnemonicParsing="false" onAction="#handleHCLick" text="Ny haiker" />
+      <TextField fx:id="name" layoutX="15.0" layoutY="94.0" prefHeight="25.0" prefWidth="129.0" />
+      <TextField fx:id="age" layoutX="150.0" layoutY="94.0" prefHeight="25.0" prefWidth="48.0" />
+      <Label layoutX="15.0" layoutY="78.0" text="Navn:" />
+      <Label layoutX="151.0" layoutY="78.0" text="Alder:" />
+      <Button fx:id="newCar" layoutX="228.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleDCLick" text="Ny bil og fører" />
+      <Label layoutX="15.0" layoutY="22.0" text="Navn:" />
+      <Label layoutX="151.0" layoutY="22.0" text="Alder:" />
+      <TextField fx:id="driverName" layoutX="14.0" layoutY="40.0" prefHeight="25.0" prefWidth="129.0" />
+      <TextField fx:id="driverAge" layoutX="150.0" layoutY="40.0" prefHeight="25.0" prefWidth="48.0" />
    </children>
 </AnchorPane>
