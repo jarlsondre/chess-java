@@ -20,7 +20,7 @@ public class DownCounterController{
 	void updateOutput() {
 		String outputString = "Ferdig? ";
 		if (downCounter.isFinished()) {
-			outputString += "Ja";
+			outputString += "Ja!";
 		} else {
 			outputString += "Nei";			
 		}
