@@ -38,7 +38,6 @@ public class Counter {
 	}
 
 	int getCounter() {
-		// TODO Auto-generated method stub
 		return counter;
 	}
 
