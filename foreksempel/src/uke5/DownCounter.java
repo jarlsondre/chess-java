@@ -16,7 +16,7 @@ public class DownCounter {
 	public void countDown() {
 		if (! isFinished()) {
 			counter = counter - 1;
-			System.out.println("Teller ned med 1.\nCounter er nÃ¥ " + counter);
+			System.out.println("Teller ned med 1.\nCounter er nå " + counter);
 		}
 	}
 	
