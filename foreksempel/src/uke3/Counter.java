@@ -1,7 +1,5 @@
 package uke3;
 
-import counter.Counter;
-
 class Counter {
 
 	int end;
