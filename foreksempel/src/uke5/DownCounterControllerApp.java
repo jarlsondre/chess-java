@@ -9,7 +9,7 @@ public class DownCounterControllerApp extends Application{
 	@Override
 	public void start(final Stage primaryStage) throws Exception {
 		primaryStage.setTitle("DownCounter");
-		primaryStage.setScene(new Scene(FXMLLoader.load(DownCounter.class.getResource("DownCounter.fxml"))));
+		primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("DownCounter.fxml"))));
 		primaryStage.show();
 	}
 

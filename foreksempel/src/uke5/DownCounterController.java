@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
-public class DownCounterController{
+public class DownCounterController {
 
 	DownCounter downCounter = new DownCounter(3);
 	

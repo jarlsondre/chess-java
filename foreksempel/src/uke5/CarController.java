@@ -16,14 +16,16 @@ public class CarController {
 	@FXML
 	TextField age;
 	@FXML
-	Button button;
+	Button driverButton;
+	@FXML
+	Button hikerButton;
 	@FXML
 	Label carLabel;
 	
 	Car car;
 	
 	@FXML
-	public void handleHCLick() {
+	public void onHikerClick() {
 		int tmpage = Integer.parseInt(age.getText());
 		Person p = new Person(name.getText(),tmpage);
 		car.addHiker(p);
@@ -31,23 +33,23 @@ public class CarController {
 		
 		// Jeg har lyst til å sette knappen til uvirksom dersom det er fullt i bilen.
 		if (car.isFull()) {
-			button.setDisable(true);
+			hikerButton.setDisable(true);
 			carLabel.setText("Bilen er full!\n"+carLabel.getText());
 		}
 	}
 
+
 	@FXML
-	public void handleDCLick() {
+
+	public void onDriverClick() {
 		int tmpage = Integer.parseInt(driverAge.getText());
 		Person p = new Person(driverName.getText(),tmpage);
-		car.setDriver(p);
-		carLabel.setText(car.toString());
-		
-		// Jeg har lyst til å sette knappen til uvirksom dersom det er fullt i bilen.
-		if (car.isFull()) {
-			button.setDisable(true);
-			carLabel.setText("Bilen er full!\n"+carLabel.getText());
+		if (car.setDriver(p))
+			carLabel.setText(car.toString());
+		else {
+			carLabel.setText(p.getName() + " er for ung til å kjøre!\n"+car);
 		}
+			
 	}
 
 	/**
