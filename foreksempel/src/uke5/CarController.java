@@ -65,6 +65,7 @@ public class CarController {
 		System.out.println("car før vi lager den: "+car);
 		car = new Car("MX34323",3);
 		System.out.println("car etter at den er laget: "+car);
+		carLabel.setText(car.toString());
 	}
 	
 	public static void main(String[] args) {
