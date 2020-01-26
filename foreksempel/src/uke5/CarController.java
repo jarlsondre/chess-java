@@ -20,8 +20,9 @@ public class CarController {
 	@FXML
 	Label carLabel;
 	
-	Car car = new Car("MX34323",3);
+	Car car;
 	
+	@FXML
 	public void handleHCLick() {
 		int tmpage = Integer.parseInt(age.getText());
 		Person p = new Person(name.getText(),tmpage);
@@ -35,6 +36,7 @@ public class CarController {
 		}
 	}
 
+	@FXML
 	public void handleDCLick() {
 		int tmpage = Integer.parseInt(driverAge.getText());
 		Person p = new Person(driverName.getText(),tmpage);
@@ -48,6 +50,20 @@ public class CarController {
 		}
 	}
 
+	/**
+	 * initialize kalles etter at GUIen er satt opp. Her kan vi 
+	 * sette opp de objektene vi har behov for i den tilstanden
+	 * de skal være. Når navnet på metoden er initialize() vil 
+	 * den automatisk kalles, en trenger ikke gjøre noe med
+	 * FXML-dokumentet.
+	 */
+	@FXML
+	void initialize() {
+		System.out.println("Initialiserer....");
+		System.out.println("car før vi lager den: "+car);
+		car = new Car("MX34323",3);
+		System.out.println("car etter at den er laget: "+car);
+	}
 	
 	public static void main(String[] args) {
 		Car c = new Car("AA34533", 4);
