@@ -15,7 +15,7 @@ public class DownCounterController {
 	void handleNew() {
 		int i = Integer.valueOf(input.getText());
 		downCounter = new DownCounter(i);
-		output.setText("Starter med "+i+":");
+		output.setText("Starter med "+i+": ");
 //		updateOutput();
 	}
 
