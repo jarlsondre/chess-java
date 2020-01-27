@@ -13,16 +13,18 @@ public class DownCounterController {
 
 	@FXML
 	void handleNew() {
-		downCounter = new DownCounter(Integer.valueOf(input.getText()));
-		updateOutput();
+		int i = Integer.valueOf(input.getText());
+		downCounter = new DownCounter(i);
+		output.setText("Starter med "+i+":");
+//		updateOutput();
 	}
 
 	void updateOutput() {
 		String outputString = "Ferdig? ";
 		if (downCounter.isFinished()) {
-			outputString += "Ja!";
+			outputString += " Ja!";
 		} else {
-			outputString += "Nei";			
+			outputString += " Nei";			
 		}
 		output.setText(outputString);
 	}
