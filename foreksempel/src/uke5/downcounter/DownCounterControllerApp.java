@@ -1,20 +1,20 @@
-package uke5;
+package uke5.downcounter;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-
-public class CarApp extends Application{
+public class DownCounterControllerApp extends Application{
 	@Override
 	public void start(final Stage primaryStage) throws Exception {
-		primaryStage.setTitle("Car");
-		primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("CarGUI.fxml"))));
+		primaryStage.setTitle("DownCounter");
+		primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("DownCounter.fxml"))));
 		primaryStage.show();
 	}
-	
+
 	public static void main(final String[] args) {
 		Application.launch(args);
 	}
+
 }

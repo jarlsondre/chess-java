@@ -1,4 +1,4 @@
-package uke5;
+package uke5.downcounter;
 
 public class DownCounter {
 	
