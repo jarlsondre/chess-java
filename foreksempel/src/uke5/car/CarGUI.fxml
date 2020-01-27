@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="200.0" prefWidth="336.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uke5.CarController">
+<AnchorPane prefHeight="200.0" prefWidth="336.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uke5.car.CarController">
    <children>
       <Label fx:id="carLabel" layoutX="14.0" layoutY="123.0" prefHeight="56.0" prefWidth="306.0" text="Bilinfo:" wrapText="true" />
       <Button fx:id="hikerButton" layoutX="228.0" layoutY="94.0" mnemonicParsing="false" onAction="#onHikerClick" text="Ny haiker" />
