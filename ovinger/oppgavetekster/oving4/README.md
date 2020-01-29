@@ -32,10 +32,15 @@ Her stilles det også krav til at det må være noe kalkulasjoner av et eller an
 * Appen må ha mulighet for å utvides med en form for lagring i form av skriving til og lesing fra fil.
 * Du må også ha en app-klasse som kun brukes til å starte appen. 
 
+<br>
+
 Eksempler på apper man kan lage:
-* Kalkulatorer (lånekalkulator, valutakalkulator, kvotekalkulator, vanlig regnekalkulator, etc.)
-* Spill
+* Spill (f.eks. bondesjakk, sokoban, minesweeper, yatzy)
 * Standard mobilapper som kalender, klokke, påminnelser, etc.
+
+Hva man kan lagre av data:
+* For spill kan det være relevant å lagre tilstanden til spillet slik at man kan fortsette senere
+* For mobilapper som kalender, klokke og påminnelser, kan det være relevant å lagre henholdsvis avtaler, alarmer og påminnelser
 
 I denne øvingen legger oppgavetekstene mindre føringer for hvordan koden din skal struktureres enn tidligere. 
 Det er meningen du skal få øvelse i å tenke ut objektstrukturer som passer til å løse oppgaven selv. 
@@ -65,6 +70,7 @@ Dette er noe som først skal gjøres i øving 7.
 **Lever inn kildekoden din (controller-klasse, app-klasse, grensesnitt, FXML-fil, og alle resterende klasser du har skrevet) innen 
 *19. februar*. Øvingen må godkjennes av stud.assen din innen *26. februar*.**
 
+<br>
 
 ## ***OBS! LES DETTE:*** Nyttig informasjon relatert til øvingen  
 I øving 7 skal du utvide appen med noe ekstra funksjonalitet og en form for persistens, altså at appen lagrer data 
@@ -81,6 +87,7 @@ før du begynner.
 Du bør også **[Installere SceneBuilder](https://www.ntnu.no/wiki/display/tdt4100/Installere+SceneBuilder)**. 
 Scenebuilder er et program som gjør det veldig lett å lage brukergrensesnittet til appen. 
 
+<br>
 
 ## Hjelp / mistanke om bugs
 Ved spørsmål eller behov for hjelp konsulter studassen din i saltiden hans / hennes. Du kan også oppsøke andre studasser på sal eller 
