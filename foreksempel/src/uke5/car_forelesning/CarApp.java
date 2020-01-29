@@ -1,4 +1,4 @@
-package uke5.car;
+package uke5.car_forelesning;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

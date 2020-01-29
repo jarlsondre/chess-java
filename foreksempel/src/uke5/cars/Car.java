@@ -1,4 +1,4 @@
-package uke5.bil;
+package uke5.cars;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ public class Car {
 	public boolean addHiker(Person person) {
 		// Må sjekke seats - 1, siden vi jo har en fører. 
 		// Eller kanskje vi må sjekke OM vi har - deres oppgave! 
-		if (hikers.size() == seats -1 ) {
+		if (this.isFull()) {
 			System.out.println("Denna bilen er full, "+person.getName()+
 					" fikk ikke plass!");
 			return false;
@@ -71,7 +71,16 @@ public class Car {
 
 	@Override
 	public String toString() {
-		return "Car [driver=" + driver + ", plate=" + plate + ", seats=" + seats + ", hikers=" + hikers + "]";
+		String tmp = plate + "("+seats+" seter)\n";
+		if (driver != null) {
+			tmp += "Kjører: "+driver+"\n";
+		}
+		List<String> personinfo = new ArrayList<>();
+		for (Person personOrig : hikers) {
+			personinfo.add(personOrig.toString());
+		}
+		tmp += String.join(",", personinfo);
+		return tmp;
 	}
 
 	public static void main(String[] args) {
@@ -103,6 +112,32 @@ public class Car {
 			.filter(p -> p.getAge()>= 18)
 			.sorted((p1, p2) -> Integer.compare(p1.getAge(),p2.getAge()))
 			.forEach(System.out::println);
+	}
+
+	public boolean isFull() {
+		return this.seats == this.hikers.size();
+	}
+	
+	public int totalAge() {
+		int age = 0;
+		if (driver != null)
+			age += driver.getAge();
+		for (Person personOrig : hikers) {
+			age += personOrig.getAge();
+		}
+		return age;
+	}
+
+	public String getPlate() {		
+		return this.plate.toString();
+	}
+
+	public Person getHiker(String name) {
+		for (Person personOrig : hikers) {
+			if (personOrig.getName().equals(name))
+			return personOrig;
+		}
+		return null;
 	}
 
 }

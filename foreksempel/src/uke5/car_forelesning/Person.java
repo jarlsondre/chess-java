@@ -1,4 +1,4 @@
-package uke5.bil;
+package uke5.car_forelesning;
 
 /**
  * En superenkel Personklasse som vi skal stappe inn i biler.
@@ -31,10 +31,14 @@ public class Person {
 	}
 
 
-
+	public static void main(String[] args) {
+		Person p = new Person("Kåre",23);
+		System.out.println(p);
+	}
+	
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", age=" + age + "]";
+		return name + " (" + age + ")";
 	}
 
 }

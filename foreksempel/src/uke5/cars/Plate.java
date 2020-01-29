@@ -1,4 +1,4 @@
-package uke5.bil;
+package uke5.cars;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -19,7 +19,7 @@ public class Plate {
 
 	@Override
 	public String toString() {
-		return "Plate [sign=" + sign + "]";
+		return sign;
 	}
 
 
