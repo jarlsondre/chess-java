@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uke5.bil.CarController">
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uke5.car_forelesning.CarController">
    <children>
       <Pane layoutX="-62.0" layoutY="-77.0" prefHeight="539.0" prefWidth="568.0">
          <children>
