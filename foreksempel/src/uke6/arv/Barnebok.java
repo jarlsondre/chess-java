@@ -11,11 +11,12 @@ public class Barnebok extends Bok {
 
 	
 
+	// Legg merke til at vi kan kalle super sin toString() for å skrive ut de variablene som
+	// Barnebok har arvet fra Bok! Super kjenner ikke til maksalder.
 	@Override
 	public String toString() {
 		return "Barnebok [maksalder=" + maksalder + ", toString()=" + super.toString() + "]";
 	}
-
 
 
 	public static void main(String[] args) {
