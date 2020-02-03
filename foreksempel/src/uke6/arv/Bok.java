@@ -13,6 +13,26 @@ public class Bok {
 		this.sideantall = sideantall;
 	}
 
+	
+	
+	public String getTittel() {
+		return tittel;
+	}
+
+
+
+	public String getForfatter() {
+		return forfatter;
+	}
+
+
+
+	public int getSideantall() {
+		return sideantall;
+	}
+
+
+
 	public static void main(String[] args) {
 		Bok bok = new Bok("Das Kapital","Karl Marx",500);
 		System.out.println(bok);
