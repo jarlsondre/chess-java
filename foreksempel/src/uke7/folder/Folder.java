@@ -17,10 +17,6 @@ public class Folder {
 		Folder div = new Folder("div",borgeh);
 		borgeh.setName("kari");
 		borgeh.move(hal);
-//		System.out.println(home);
-//		System.out.println(borgeh);
-//		System.out.println(div);
-//		System.out.println(hal);
 		borgeh.printTree();
 		
 		//		File homefil = new File("tmpfil.txt",home);
