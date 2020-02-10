@@ -7,7 +7,7 @@ public class Folder {
  * dere finner direkte til venstre når dere går ut fra forelesningen. Her kommer vi til å 
  * jobbe videre på og fullføre logikken til Snakebird-spillet som vi startet på i 
  * øvingsforelesningen forrige uke. Det kommer til å være vitasser i tillegg til andre fra 
- * fagstaben tilstede som hjelper dere med oppgaveløsningen og det varer fra 14:15-16:00" 	
+ * fagstaben tilstede som hjelper dere med oppgaveløsningen og det varer fra 14:15-16:00." 	
  */
 	public static void main(String[] args) {
 //		Folder root = new Folder("Rot",null);
