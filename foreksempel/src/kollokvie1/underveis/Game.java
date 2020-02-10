@@ -29,6 +29,41 @@ public class Game {
 		
 		this.snake = new ArrayList<>(snake);
 	}
+	
+	public boolean canMove(int dx, int dy) {
+		if (Math.abs(dx) + Math.abs(dy) > 1) {
+			return false;
+		}
+		
+		int x = snake.get(0).getX() + dx;
+		int y = snake.get(0).getY() + dy;
+		
+		if (!isTile(x, y)) {
+			return false;
+		}
+		
+		Tile tile = getTile(x, y);
+		
+		return !tile.hasCollision() || tile == snake.get(snake.size() - 1);
+	}
+	
+	public void move(int dx, int dy) {
+		if (!canMove(dx, dy)) {
+			throw new IllegalArgumentException("Not a valid move");
+		}
+		
+		int x = snake.get(0).getX() + dx;
+		int y = snake.get(0).getY() + dy;
+		
+		//Tile tail = snake.get(snake.size() - 1);
+		Tile tail = snake.remove(snake.size() - 1);
+		tail.setAir();
+		//snake.remove(snake.size() - 1);
+		
+		Tile newHead = getTile(x, y);
+		newHead.setSnake();
+		snake.add(0, newHead);
+	}
 
 	public boolean isTile(int x, int y) {
 		return 0 <= x && x < getWidth() && 0 <= y && y < getHeight();
@@ -90,6 +125,28 @@ public class Game {
 
 	    game.createSnake(Arrays.asList(game.getTile(9, 8), game.getTile(8, 8)));
 
+	    System.out.println(game);
+	    game.move(0, -1);
+	    System.out.println(game);
+	    game.move(-1, 0);
+	    System.out.println(game);
+	    try {
+	    	game.move(0, -1);
+	    	System.out.println("Ugyldig bevegelse utløste ikke et unntak");
+	    } catch (Exception e) {
+	    	
+	    }
+	    System.out.println(game);
+	    game.move(0, 1);
+	    System.out.println(game);
+	    try {
+	    	game.move(0, 1);
+	    	System.out.println("Ugyldig bevegelse utløste ikke et unntak");
+	    } catch (Exception e) {
+	    	
+	    }
+	    System.out.println(game);
+	    game.move(1, 0);
 	    System.out.println(game);
 	}
 
