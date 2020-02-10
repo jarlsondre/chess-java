@@ -56,7 +56,11 @@ public class Game {
 
 		for (int y = 0; y < getHeight(); y++) {
 			for (int x = 0; x < getWidth(); x++) {
-				representation = representation + getTile(x, y).toString();
+				if (getTile(x, y) == snake.get(0)) {
+					representation = representation + "8"; 
+				} else {
+					representation = representation + getTile(x, y).toString();
+				}
 			}
 			representation = representation + "\n";
 		}
