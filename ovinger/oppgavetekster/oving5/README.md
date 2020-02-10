@@ -15,11 +15,13 @@
 
 ### Del 1: Programmering
 
-Velg og gjennomfør minst én av oppgavene under. Merk at **noen av oppgavene i neste øving (øving 6), bygger videre på noen av oppgavene under**, disse er uthevet med **fet skrift**. Det er ikke et krav at man gjør de uthevede oppgavene, men de gir flere oppgaver å velge mellom i øving 6.
+Velg og gjennomfør ENTEN både Partner- og Card del 2-oppgavene ELLER minst én av de andre oppgavene. 
+Merk at **noen av oppgavene i neste øving (øving 6), bygger videre på noen av oppgavene under**, disse er uthevet med **fet skrift**. 
+Det er ikke et krav at man gjør de uthevede oppgavene, men de gir flere oppgaver å velge mellom i øving 6.
 
 - [Partner](./Partner.md) (lett)
 - **[Card del 2](./Card.md)** (lett)
-- **[Twitter](./Twitter.md)** (medium)
+- **[Twitter](./Twitter.md)** (medium, men lang)
 - [Stopwatch](./Stopwatch.md) (medium)
 - [Person](./Person.md) (medium/vanskelig)
 
@@ -27,11 +29,20 @@ Oppgavene for denne øvingen skal du lagre i `ovinger/src/objectstructures`. Tes
 
 Alle oppgavene ovenfor er høyst eksamensrelevante og det anbefales følgelig å ta en titt på alle sammen.
 
-### Del 2: Klassediagram og sekvensdiagram
+### Del 2: Klassediagram
 
-- Lag et [klassediagram](https://www.ntnu.no/wiki/display/tdt4100/Klassediagrammer) og et [sekvensdiagram](https://www.ntnu.no/wiki/display/tdt4100/Sekvensdiagrammer) for den oppgaven du velger. Sekvensdiagrammet trenger ikke dekke all funksjonaliteten i oppgaven, du kan for eksempel velge en test som utfører minst to metodekall og ta utgangspunkt i den.
+- Lag et [klassediagram](https://www.ntnu.no/wiki/display/tdt4100/Klassediagrammer) for oppgaven(e) du velger. 
 
-Diagrammene kan for eksempel skrives på papir eller tegnes/lages i et valgfritt program.
+Diagrammene kan for eksempel skrives på papir eller tegnes/lages i et valgfritt program. Du trenger ikke levere inn diagrammene, 
+men de skal vises til studass under godkjenning av øvingen.
+
+### Del 3: Testing
+
+Skriv kode som tester HELE `CoffeeCup`-klassen, dvs. alle metodene i `CoffeeCup`-klassen og konstruktøren dens.
+Du finner `CoffeeCup`-klassen under `ovinger/src/objectstructures`. 
+
+Her er det anbefalt å bruke [JUnit](https://www.ntnu.no/wiki/display/tdt4100/Enhetstesting+med+JUnit), 
+men det er lov å teste vha. main-metoden også.
 
 ### Hjelp / mistanke om bugs
 
