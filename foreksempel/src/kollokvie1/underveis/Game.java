@@ -47,7 +47,7 @@ public class Game {
 		return !tile.hasCollision() || tile == snake.get(snake.size() - 1);
 	}
 	
-	public void move(int dx, int dy) {
+	private void move(int dx, int dy) {
 		if (!canMove(dx, dy)) {
 			throw new IllegalArgumentException("Not a valid move");
 		}
@@ -63,6 +63,30 @@ public class Game {
 		Tile newHead = getTile(x, y);
 		newHead.setSnake();
 		snake.add(0, newHead);
+	}
+	
+	public void moveLeft() {
+		if (canMove(-1, 0)) {
+			move(-1, 0);
+		}
+	}
+	
+	public void moveRight() {
+		if (canMove(1, 0)) {
+			move(1, 0);
+		}
+	}
+	
+	public void moveUp() {
+		if (canMove(0, -1)) {
+			move(0, -1);
+		}
+	}
+	
+	public void moveDown() {
+		if (canMove(0, 1)) {
+			move(0, 1);
+		}
 	}
 
 	public boolean isTile(int x, int y) {
