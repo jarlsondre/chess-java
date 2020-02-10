@@ -55,12 +55,15 @@ public class Game {
 		int x = snake.get(0).getX() + dx;
 		int y = snake.get(0).getY() + dy;
 		
-		//Tile tail = snake.get(snake.size() - 1);
-		Tile tail = snake.remove(snake.size() - 1);
-		tail.setAir();
-		//snake.remove(snake.size() - 1);
-		
 		Tile newHead = getTile(x, y);
+		
+		if (!newHead.isFruit()) {
+			//Tile tail = snake.get(snake.size() - 1);
+			Tile tail = snake.remove(snake.size() - 1);
+			tail.setAir();
+			//snake.remove(snake.size() - 1);
+		}
+		
 		newHead.setSnake();
 		snake.add(0, newHead);
 	}
@@ -150,28 +153,9 @@ public class Game {
 	    game.createSnake(Arrays.asList(game.getTile(9, 8), game.getTile(8, 8)));
 
 	    System.out.println(game);
-	    game.move(0, -1);
+	    game.moveUp();
 	    System.out.println(game);
-	    game.move(-1, 0);
-	    System.out.println(game);
-	    try {
-	    	game.move(0, -1);
-	    	System.out.println("Ugyldig bevegelse utløste ikke et unntak");
-	    } catch (Exception e) {
-	    	
-	    }
-	    System.out.println(game);
-	    game.move(0, 1);
-	    System.out.println(game);
-	    try {
-	    	game.move(0, 1);
-	    	System.out.println("Ugyldig bevegelse utløste ikke et unntak");
-	    } catch (Exception e) {
-	    	
-	    }
-	    System.out.println(game);
-	    game.move(1, 0);
+	    game.moveUp();
 	    System.out.println(game);
 	}
-
 }
