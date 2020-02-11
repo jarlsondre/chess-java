@@ -15,8 +15,8 @@
 
 ### Del 1: Programmering
 
-Velg og gjennomfør ENTEN både Partner- og Card del 2-oppgavene ELLER minst én av de andre oppgavene. 
-Merk at **noen av oppgavene i neste øving (øving 6), bygger videre på noen av oppgavene under**, disse er uthevet med **fet skrift**. 
+Velg og gjennomfør ENTEN både Partner- og Card del 2-oppgavene ELLER minst én av de andre oppgavene.
+Merk at **noen av oppgavene i neste øving (øving 6), bygger videre på noen av oppgavene under**, disse er uthevet med **fet skrift**.
 Det er ikke et krav at man gjør de uthevede oppgavene, men de gir flere oppgaver å velge mellom i øving 6.
 
 - [Partner](./Partner.md) (lett)
@@ -31,17 +31,16 @@ Alle oppgavene ovenfor er høyst eksamensrelevante og det anbefales følgelig å
 
 ### Del 2: Klassediagram
 
-- Lag et [klassediagram](https://www.ntnu.no/wiki/display/tdt4100/Klassediagrammer) for oppgaven(e) du velger. 
+- Lag et [klassediagram](https://www.ntnu.no/wiki/display/tdt4100/Klassediagrammer) for oppgaven(e) du velger.
 
-Diagrammene kan for eksempel skrives på papir eller tegnes/lages i et valgfritt program. Du trenger ikke levere inn diagrammene, 
-men de skal vises til studass under godkjenning av øvingen.
+Diagrammet kan for eksempel skrives på papir eller tegnes/lages i et valgfritt program. Du trenger ikke levere inn diagrammene, men de skal vises til studass under godkjenning av øvingen.
 
 ### Del 3: Testing
 
-Skriv kode som tester HELE `CoffeeCup`-klassen, dvs. alle metodene i `CoffeeCup`-klassen og konstruktøren dens.
-Du finner `CoffeeCup`-klassen under `ovinger/src/objectstructures`. 
+Skriv kode som tester HELE `CoffeeCup`-klassen fra øving 3, dvs. alle metodene i `CoffeeCup`-klassen og konstruktøren dens.
+Du finner `CoffeeCup`-klassen under `ovinger/src/objectstructures`.
 
-Her er det anbefalt å bruke [JUnit](https://www.ntnu.no/wiki/display/tdt4100/Enhetstesting+med+JUnit), 
+Her er det anbefalt å bruke [JUnit](https://www.ntnu.no/wiki/display/tdt4100/Enhetstesting+med+JUnit),
 men det er lov å teste vha. main-metoden også.
 
 ### Hjelp / mistanke om bugs

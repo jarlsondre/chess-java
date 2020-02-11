@@ -6,7 +6,7 @@ I mange sammenhenger vil objekter av en klasse inneholde eller "eie" objekter av
 
 I denne oppgaven skal du implementere en `StopWatchManager`-klasse som kan holde styr på flere stoppeklokker. Ved hjelp av `StopWatchManager` skal man enkelt kunne holde styr på flere stoppeklokker og sørge for at alle stoppeklokker får beskjed om tiden som går. Dette kan være nyttig hvis man f.eks. ønsker å holde styr på flere løpere i et skirenn der ikke alle starter og fullfører samtidig, men hvor allikevel klokken må gå for alle.
 
-Det skal være mulig å opprette nye stoppeklokker med et tilhørende navn (streng). Navnet skal man senere kunne bruke til å hente stoppeklokken igjen eller fjerne stoppeklokken fra `StopWatchManager`. For å få til dette kan det være lurt å se litt på `Map` fra `Collection`-rammeverket.
+Det skal være mulig å opprette nye stoppeklokker med et tilhørende navn (streng). Navnet skal man senere kunne bruke til å hente stoppeklokken igjen eller fjerne stoppeklokken fra `StopWatchManager`. For å få til dette kan det være lurt å se litt på `Map` fra [Collection-rammeverket](https://www.ntnu.no/wiki/display/tdt4100/Collection-rammeverket).
 
 `StopWatchManager` skal ha følgende endringsmetoder:
 
