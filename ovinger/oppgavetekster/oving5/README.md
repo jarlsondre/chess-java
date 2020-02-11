@@ -19,11 +19,11 @@ I denne øvingen skal du velge og og gjennomføre ENTEN både Partner- og Card d
 Merk at **noen av oppgavene i neste øving (øving 6), bygger videre på noen av oppgavene under**, disse er uthevet med **fet skrift**.
 Det er ikke et krav at man gjør de uthevede oppgavene, men de gir flere oppgaver å velge mellom i øving 6.
 
-**Gjør enten begge disse:**
+**Gjør enten _begge_ disse:**
 - [Partner](./Partner.md) (lett)
 - **[Card del 2](./Card.md)** (lett)
 
-**Eller minst én av følgende oppgaver:**
+**Eller _minst én_ av følgende oppgaver:**
 - **[Twitter](./Twitter.md)** (medium, men lang)
 - [Stopwatch](./Stopwatch.md) (medium)
 - [Person](./Person.md) (medium/vanskelig)
