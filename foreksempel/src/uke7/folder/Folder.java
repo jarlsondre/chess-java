@@ -49,9 +49,35 @@ public class Folder {
 		File homefil = new File("tmpfil.txt",home);
 		File egenfil1 = new File("egenfil.txt", borgeh);
 		File egenfil2 = new File("egenfil2.txt", borgeh);
+		File tvillingfil1 = new File("tvillingfil.txt", borgeh);
+		File tvillingfil2 = new File("tvillingfil.txt", hal);
 		egenfil2.move(home);
 		home.printTree();
 		System.out.println("FindFirst:" + home.findFirst("hal"));
+		
+		System.out.println(home.findAll("tvillingfil.txt"));
+	}
+
+
+	List<File> findAll(String pattern) {
+		List<File> result = new ArrayList<>();
+		
+		findAll(pattern, result);
+		
+		return result;
+	}
+
+
+	private void findAll(String pattern, List<File> result) {
+		for (File file : files) {
+			if (matchesName(pattern, file.getName())) {
+				System.out.println("Match!");
+				result.add(file);
+			}
+		}
+		for (Folder folder : folders) {
+			folder.findAll(pattern, result);
+		}
 	}
 
 
