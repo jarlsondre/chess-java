@@ -37,7 +37,15 @@ Diagrammet kan for eksempel skrives på papir eller tegnes/lages i et valgfritt 
 
 ### Del 3: Testing
 
-Skriv kode som tester HELE `CoffeeCup`-klassen fra øving 3, dvs. alle metodene i `CoffeeCup`-klassen og konstruktøren dens.
+Skriv kode som tester oppførselen til `CoffeeCup`-klassen, dvs. at du skal teste om metodene i listen under har rett oppførsel og returnerer det de skal, 
+i tillegg til at du skal teste konstruktørene. 
+
+* `getCapacity`
+* `getCurrentVolume`
+* `increaseCupSize`
+* `drinkCoffee`
+* `fillCoffee`
+
 Du finner `CoffeeCup`-klassen under `ovinger/src/objectstructures`.
 
 Her er det anbefalt å bruke [JUnit](https://www.ntnu.no/wiki/display/tdt4100/Enhetstesting+med+JUnit),
