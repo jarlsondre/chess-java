@@ -21,7 +21,7 @@ public class Folder {
 		borgeh.printTree();
 		System.out.println("borgeh i hal: "+hal.contains2(borgeh));
 
-		// Litt kode for å vise hvordan contains2 er elendig i forhold til contains.
+		// Litt kode for å vise hvordan contains2 er elendig i forhold til contains!
 		// Vi lager tretti nye foldere inni home.
 		for (int i = 0; i < 30; i++) {
 			home.addFolder(new Folder(Integer.toString(i),home));				
