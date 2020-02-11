@@ -8,166 +8,179 @@ public class Folder {
 	String name;
 	Folder parent;
 	List<Folder> folders;
-	// List<File> files;
+	List<File> files;
 
 	public static void main(String[] args) {
 		Folder home = new Folder("home",null);
 		Folder borgeh = new Folder("borgeh",home);
 		Folder hal = new Folder("hal",home);
 		Folder div = new Folder("div",borgeh);
+//		home.printTree();
 		borgeh.setName("kari");
 		System.out.println("borgeh i hal: "+hal.contains2(borgeh));
 		borgeh.move(hal);
-		borgeh.printTree();
+//		borgeh.printTree();
 		System.out.println("borgeh i hal: "+hal.contains2(borgeh));
 
 		// Litt kode for å vise hvordan contains2 er elendig i forhold til contains!
 		// Vi lager tretti nye foldere inni home.
-		for (int i = 0; i < 30; i++) {
-			home.addFolder(new Folder(Integer.toString(i),home));				
-		}
+		//		for (int i = 0; i < 30; i++) {
+		//			home.addFolder(new Folder(Integer.toString(i),home));				
+		//		}
 
 		// Inni hver av home sine subfoldere lager vi tretti nye foldere.
-		for (Folder folder : home.folders) {
-			for (int i = 0; i < 30; i++) {
-				folder.addFolder(new Folder(Integer.toString(i),folder));				
-			}
-		}
-
-		//		home.printTree();
-
-		// Se på forskjellen i hva som skrives ut av disse - hvilken er mest effektiv?
-		//		home.contains2(home.folders.get(25));
-		System.out.println("contains:");
-		Folder destination = home.folders.get(23).folders.get(24);
-		System.out.println(destination);
-		System.out.println(home.contains(destination));
-		//		versus home.contains2(destination);
-
-		//		File homefil = new File("tmpfil.txt",home);
-		//		File egenfil1 = new File("egenfil.txt", borgeh);
-		//		File egenfil2 = new File("egenfil2.txt", borgeh);
-
-	}
+		//		for (Folder folder : home.folders) {
+		//			for (int i = 0; i < 30; i++) {
+		//				folder.addFolder(new Folder(Integer.toString(i),folder));				
+		//			}
 
 
-	/* 
-	 * Dette er den 'enkleste' måten å tenke seg at en sjekker om
-	 * destination er en subfolder av this. Problemet er at denne sjekker
-	 * potensielt ALLE subfoldere til ALLE subfoldere. Det kan bli mye!
-	 * contains sjekker motsatt vei i 1:n-relasjonen mellom en folder
-	 * og dens subfoldere, da er det kun 1 objekt per nivå, og ikke n.
-	 */
-	boolean contains2(Folder destination) {
-//		System.out.println("Sjekker mot "+destination.toString());
-		if (this == destination)
+
+//	home.printTree();
+
+	// Se på forskjellen i hva som skrives ut av disse - hvilken er mest effektiv?
+	//		home.contains2(home.folders.get(25));
+	//		System.out.println("contains:");
+//	Folder destination = home.folders.get(23).folders.get(24);
+//	System.out.println(destination);
+//	System.out.println(home.contains(destination));
+	//		versus home.contains2(destination);
+
+	File homefil = new File("tmpfil.txt",home);
+	File egenfil1 = new File("egenfil.txt", borgeh);
+	File egenfil2 = new File("egenfil2.txt", borgeh);
+	home.printTree();
+}
+
+
+/* 
+ * Dette er den 'enkleste' måten å tenke seg at en sjekker om
+ * destination er en subfolder av this. Problemet er at denne sjekker
+ * potensielt ALLE subfoldere til ALLE subfoldere. Det kan bli mye!
+ * contains sjekker motsatt vei i 1:n-relasjonen mellom en folder
+ * og dens subfoldere, da er det kun 1 objekt per nivå, og ikke n.
+ */
+boolean contains2(Folder destination) {
+	//		System.out.println("Sjekker mot "+destination.toString());
+	if (this == destination)
+		return true;
+	for (Folder folder : folders) {
+		System.out.println("Sjekker så mot "+folder.toString());
+		if (folder.contains2(destination))
 			return true;
-		for (Folder folder : folders) {
-			System.out.println("Sjekker så mot "+folder.toString());
-			if (folder.contains2(destination))
-				return true;
-		}		
+	}		
+	return false;
+}
+
+/*
+ *  Hvordan fungerer contains?
+ *  Hvis en skal sjekke om this inneholder destination, så
+ *  kan en sjekke alle parents til destination helt til parent
+ *  er null for om den aktuelle Folder (dest, dest.parent, 
+ *  dest.parent.parent etc, men dette skjer rekursivt) er lik this.
+ *  Hvis den er lik this, så må en returnere True siden destination da
+ *  ligger i en subfolder til this, eller dypere. 
+ *  Hvis en kommer helt dit og ender opp med null, da 
+ *  returnerer en false - destination er ikke en subfolder.
+ */
+boolean contains(Folder destination) {
+	if (destination != null)
+		System.out.println("Sjekker mot " + destination.toString());
+	if (destination == this) {
+		return true;
+	}
+	else if (destination == null) {
 		return false;
 	}
+	else return this.contains(destination.parent);
+}
 
-	/*
-	 *  Hvordan fungerer contains?
-	 *  Hvis en skal sjekke om this inneholder destination, så
-	 *  kan en sjekke alle parents til destination helt til parent
-	 *  er null for om den aktuelle Folder (dest, dest.parent, 
-	 *  dest.parent.parent etc, men dette skjer rekursivt) er lik this.
-	 *  Hvis den er lik this, så må en returnere True siden destination da
-	 *  ligger i en subfolder til this, eller dypere. 
-	 *  Hvis en kommer helt dit og ender opp med null, da 
-	 *  returnerer en false - destination er ikke en subfolder.
-	 */
-	boolean contains(Folder destination) {
-		if (destination != null)
-			System.out.println("Sjekker mot " + destination.toString());
-		if (destination == this) {
-			return true;
-		}
-		else if (destination == null) {
-			return false;
-		}
-		else return this.contains(destination.parent);
+private void move(Folder destination) {
+	System.out.println("Skal flytte " + this.getName() + 
+			" til " + destination.getName());
+	if (destination != null && this.contains(destination)) {
+		throw new IllegalStateException("Uendelig løkke...");
 	}
 
-	private void move(Folder destination) {
-		System.out.println("Skal flytte " + this.getName() + 
-				" til " + destination.getName());
-		if (destination != null && this.contains(destination)) {
-			throw new IllegalStateException("Uendelig løkke...");
-		}
+	// parent må ha beskjed før vi endrer parent til en ny Folder.
+	parent.removeFolder(this);
 
-		// parent må ha beskjed før vi endrer parent til en ny Folder.
-		parent.removeFolder(this);
+	// Selv
+	this.parent = destination;
 
-		// Selv
-		this.parent = destination;
+	// ny parent må få beskjed
+	parent.addFolder(this);
 
-		// ny parent må få beskjed
+}
+
+private void removeFolder(Folder folder) {
+	folders.remove(folder);
+}
+
+private void printTree() {
+	System.out.println(this);
+	
+	for (File file : files) {
+		System.out.println(file.toString());
+	}
+	
+	for (Folder folder : folders) {
+		folder.printTree();
+	}
+
+}
+
+@Override
+public String toString() {
+	String tmp = "/" + name;
+	if (parent != null)
+		tmp = parent.toString() + tmp;
+	return tmp;
+}
+public Folder(String name, Folder parent) {
+	super();
+	folders = new ArrayList<>();
+	files = new ArrayList<>();
+	
+	//		files = new ArrayList<>();
+	this.name = name;
+	//		this.parent = parent; // Denne strykes, brukes igjen etterpå.
+	if (parent != null) {
+		setParent(parent);
 		parent.addFolder(this);
-
 	}
 
-	private void removeFolder(Folder folder) {
-		folders.remove(folder);
-	}
-
-	private void printTree() {
-		System.out.println(this);
-
-		for (Folder folder : folders) {
-			folder.printTree();
-		}
-
-	}
-
-	@Override
-	public String toString() {
-		String tmp = "/" + name;
-		if (parent != null)
-			tmp = parent.toString() + tmp;
-		return tmp;
-	}
-	public Folder(String name, Folder parent) {
-		super();
-		folders = new ArrayList<>();
-		//		files = new ArrayList<>();
-		this.name = name;
-		//		this.parent = parent; // Denne strykes, brukes igjen etterpå.
-		if (parent != null) {
-			setParent(parent);
-			parent.addFolder(this);
-		}
-
-	}
-	void addFolder(Folder folder) {
-		if (!folders.contains(folder)) // Lagt til denne etter forelesning!
-			folders.add(folder);
-	}
+}
+void addFolder(Folder folder) {
+	if (!folders.contains(folder)) // Lagt til denne etter forelesning!
+		folders.add(folder);
+}
 
 
-	public String getName() {
-		return name;
-	}
+public String getName() {
+	return name;
+}
 
-	public void setName(String name) {
-		if (name == null) {
-			throw new IllegalStateException("Name cannot be null.");
-		}
-		if (name.length() == 0)
-			throw new IllegalStateException("Name cannot be of zero length.");
-		this.name = name;
+public void setName(String name) {
+	if (name == null) {
+		throw new IllegalStateException("Name cannot be null.");
 	}
+	if (name.length() == 0)
+		throw new IllegalStateException("Name cannot be of zero length.");
+	this.name = name;
+}
 
-	public Folder getParent() {
-		return parent;
-	}
-	public void setParent(Folder parent) {
-		this.parent = parent;
-	}
+public Folder getParent() {
+	return parent;
+}
+public void setParent(Folder parent) {
+	this.parent = parent;
+}
+
+
+public void addFile(File file) {
+	this.files.add(file);
+}
 
 
 }
