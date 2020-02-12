@@ -3,10 +3,14 @@ package of6.underveis;
 import java.util.Arrays;
 
 import javafx.fxml.FXML;
+import javafx.scene.layout.Pane;
 
 public class GameController {
 
 	Game game;
+	
+	@FXML
+	Pane board;
 	
 	@FXML
 	public void initialize() {
@@ -32,7 +36,21 @@ public class GameController {
 
 		game.createSnake(Arrays.asList(game.getTile(9, 8), game.getTile(8, 8)));
 		
-		System.out.println(game);
+		createBoard();
+	}
+	
+	public void createBoard() {
+		for (int y = 0; y < game.getHeight(); y++) {
+			for (int x = 0; x < game.getWidth(); x++) {
+				Pane pane = new Pane();
+				pane.setTranslateX(x * 20);
+				pane.setTranslateY(y * 20);
+				pane.setPrefHeight(20);
+				pane.setPrefWidth(20);
+				pane.setStyle("-fx-border-color: black; -fx-border-width: 1px;");
+				board.getChildren().add(pane);
+			}
+		}
 	}
 	
 }
