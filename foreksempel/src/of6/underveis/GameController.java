@@ -39,6 +39,20 @@ public class GameController {
 		createBoard();
 	}
 	
+	public String getTileColor(Tile tile) {
+		if (tile.isSnake()) {
+			return "#24d628";
+		} else if (tile.isGround()) {
+			return "#a26f42";
+		} else if (tile.isFruit()) {
+			return "#e5303a";
+		} else if (tile.isGoal()) {
+			return "#f6ec5a";
+		}
+		
+		return "#7bcaf2";
+	}
+	
 	public void createBoard() {
 		for (int y = 0; y < game.getHeight(); y++) {
 			for (int x = 0; x < game.getWidth(); x++) {
@@ -47,7 +61,6 @@ public class GameController {
 				pane.setTranslateY(y * 20);
 				pane.setPrefHeight(20);
 				pane.setPrefWidth(20);
-				pane.setStyle("-fx-border-color: black; -fx-border-width: 1px;");
 				board.getChildren().add(pane);
 			}
 		}
