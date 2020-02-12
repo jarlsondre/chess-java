@@ -15,7 +15,7 @@
 
 ### Del 1: Programmering
 
-I denne øvingen skal du velge og og gjennomføre ENTEN både Partner- og Card del 2-oppgavene ELLER minst én av Twitter, Stopwatch og Person.
+I denne øvingen skal du velge og gjennomføre ENTEN både Partner- og Card del 2-oppgavene ELLER minst én av Twitter-, Stopwatch- og Person-oppgavene.
 Merk at **noen av oppgavene i neste øving (øving 6), bygger videre på noen av oppgavene under**, disse er uthevet med **fet skrift**.
 Det er ikke et krav at man gjør de uthevede oppgavene, men de gir flere oppgaver å velge mellom i øving 6.
 
