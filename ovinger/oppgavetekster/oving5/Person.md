@@ -55,36 +55,12 @@ hallvard.addChild(jens)
 (Dette har samme effekt som kallene under punkt 2.)
 
 **Før kall**:
-```plantuml
-@startuml
 
-object "hallvard: Person" as hallvard {
-}
-object "marit: Person" as marit {
-}
-object "jens: Person" as jens {
-}
-
-@enduml
-```
+![](img/person1.png)
 
 **Etter kall**:
-```plantuml
-@startuml
 
-object "hallvard: Person" as hallvard {
-}
-object "marit: Person" as marit {
-}
-object "jens: Person" as jens {
-}
-marit -> jens: children
-jens -> marit: mother
-hallvard -> jens: children
-jens -> hallvard: father 
-
-@enduml
-```
+![](img/person2.png)
 
 ### 2. Opprettelse av koblinger med `setMother` og `setFather`
 
@@ -96,36 +72,12 @@ jens.setFather(hallvard)
 (Dette har samme effekt som kallene under punkt 1.)
 
 **Før kall**:
-```plantuml
-@startuml
 
-object "hallvard: Person" as hallvard {
-}
-object "marit: Person" as marit {
-}
-object "jens: Person" as jens {
-}
-
-@enduml
-```
+![](img/person1.png)
 
 **Etter kall**:
-```plantuml
-@startuml
 
-object "hallvard: Person" as hallvard {
-}
-object "marit: Person" as marit {
-}
-object "jens: Person" as jens {
-}
-marit -> jens: children
-jens -> marit: mother
-hallvard -> jens: children
-jens -> hallvard: father 
-
-@enduml
-```
+![](img/person2.png)
 
 ### 3. Fjerning av koblinger med `removeChild`
 
@@ -137,36 +89,12 @@ hallvard.removeChild(jens)
 (Dette har samme effekt som kallene under punkt 4.)
 
 **Før kall**:
-```plantuml
-@startuml
 
-object "hallvard: Person" as hallvard {
-}
-object "marit: Person" as marit {
-}
-object "jens: Person" as jens {
-}
-marit -> jens: children
-jens -> marit: mother
-hallvard -> jens: children
-jens -> hallvard: father
-
-@enduml
-```
+![](img/person2.png)
 
 **Etter kall**:
-```plantuml
-@startuml
 
-object "hallvard: Person" as hallvard {
-}
-object "marit: Person" as marit {
-}
-object "jens: Person" as jens {
-}
-
-@enduml
-```
+![](img/person1.png)
 
 ### 4. Fjerning av koblinger med `setMother` og `setFather`
 
@@ -178,36 +106,12 @@ jens.setFather(null)
 (Dette har samme effekt som kallene under punkt 3.)
 
 **Før kall**:
-```plantuml
-@startuml
 
-object "hallvard: Person" as hallvard {
-}
-object "marit: Person" as marit {
-}
-object "jens: Person" as jens {
-}
-marit -> jens: children
-jens -> marit: mother
-hallvard -> jens: children
-jens -> hallvard: father
-
-@enduml
-```
+![](img/person2.png)
 
 **Etter kall**:
-```plantuml
-@startuml
 
-object "hallvard: Person" as hallvard {
-}
-object "marit: Person" as marit {
-}
-object "jens: Person" as jens {
-}
-
-@enduml
-```
+![](img/person1.png)
 
 ### 5. Fjerning og oppretting av kobling med `setMother` og `setFather`, en slags "adoption"
 
@@ -217,48 +121,12 @@ jens.setFather(torkel)
 jens.setMother(jorunn)
 
 **Før kall**:
-```plantuml
-@startuml
 
-object "hallvard: Person" as hallvard {
-}
-object "marit: Person" as marit {
-}
-object "jens: Person" as jens {
-}
-object "torkel: Person" as torkel {
-}
-object "jorunn: Person" as jorunn {
-}
-marit -> jens: children
-jens -> marit: mother
-hallvard -> jens: children
-jens -> hallvard: father
-
-@enduml
-```
+![](img/person3.png)
 
 **Etter kall**:
-```plantuml
-@startuml
 
-object "hallvard: Person" as hallvard {
-}
-object "marit: Person" as marit {
-}
-object "jens: Person" as jens {
-}
-object "torkel: Person" as torkel {
-}
-object "jorunn: Person" as jorunn {
-}
-jorunn -> jens: children
-jens -> jorunn: mother
-torkel -> jens: children
-jens -> torkel: father 
-
-@enduml
-```
+![](img/person4.png)
 
 ## Oppgaven
 

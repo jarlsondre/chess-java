@@ -11,48 +11,12 @@ og (implisitt) få original-tweeten sin tekst. Merk at i en kjede av retweets, s
 hvis tweet B er en retweet av A og tweet C er en retweet av B, vil både tweet B og C ha A som original-tweet, slik det er vist under.
 
 **Riktig objektstrutur**, når B er en retweet av A og C er en retweet av B:
-```plantuml
-@startuml
 
-object "A: Tweet" as tweet1 {
-	text = "Kvitre-kvitre"
-}
-
-object "B: Tweet" as tweet2 {
-	text = "Kvitre-kvitre"
-}
-
-object "C: Tweet" as tweet3 {
-	text = "Kvitre-kvitre"
-}
-
-tweet2 -down-> tweet1: "originalTweet"
-tweet3 -down-> tweet1: "originalTweet"
-
-@enduml
-```
+![](img/twitter1.png)
 
 **Feil objektstrutur**, når B er en retweet av A og C er en retweet av B:
-```plantuml
-@startuml
 
-object "A: Tweet" as tweet1 {
-	text = "Kvitre-kvitre"
-}
-
-object "B: Tweet" as tweet2 {
-	text = "Kvitre-kvitre"
-}
-
-object "C: Tweet" as tweet3 {
-	text = "Kvitre-kvitre"
-}
-
-tweet2 -down-> tweet1: "originalTweet"
-tweet3 -down-> tweet2: "originalTweet"
-
-@enduml
-```
+![](img/twitter2.png)
 
 ## Tweet-klassen
 

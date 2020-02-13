@@ -27,30 +27,13 @@ og oppløse det, når argumentet er null. List og figurene under illustrerer de 
 og etter kallet er det koblet sammen.
 
 **Før kall**:
-```plantuml
-@startuml
 
-object "~#p1: Partner" as p11 {
-}
-object "~#p2: Partner" as p21 {
-}
-
-@enduml
-```
+![](img/partner1.png)
 
 **Etter kall**:
-```plantuml
-@startuml
 
-object "~#p1: Partner" as p12 {
-}
-object "~#p2: Partner" as p22 {
-}
-p12 --> p22: partner
-p22 --> p12: partner
+![](img/partner2.png)
 
-@enduml
-```
 ### 2. Oppløsning av partnerskap:
 **Kall**: p1.setPartner(null)
 
@@ -58,30 +41,12 @@ p22 --> p12: partner
 Før kallet er p1 og p2 koblet sammen, og etter kallet er det ikke lenger koblet sammen.
 
 **Før kall**:
-```plantuml
-@startuml
 
-object "~#p1: Partner" as p11 {
-}
-object "~#p2: Partner" as p21 {
-}
-p11 --> p21: partner
-p21 --> p11: partner
-
-@enduml
-```
+![](img/partner2.png)
 
 **Etter kall**:
-```plantuml
-@startuml
 
-object "~#p1: Partner" as p12 {
-}
-object "~#p2: Partner" as p22 {
-}
-
-@enduml
-```
+![](img/partner1.png)
 
 
 ### 3. Oppløsning og inngåelse av partnerskap i ett:
@@ -91,42 +56,13 @@ object "~#p2: Partner" as p22 {
 sammen p1 og p3, mens p2 og p4 kobles fra deres tidligere partnere.
 
 **Før kall**:
-```plantuml
-@startuml
 
-object "~#p1: Partner" as p11 {
-}
-object "~#p2: Partner" as p21 {
-}
-p11 --> p21: partner
-p21 --> p11: partner
-object "~#p3: Partner" as p31 {
-}
-object "~#p4: Partner" as p41 {
-}
-p31 --> p41: partner
-p41 --> p31: partner
-
-@enduml
-```
+![](img/partner3.png)
 
 **Etter kall**:
-```plantuml
-@startuml
 
-object "~#p1: Partner" as p12 {
-}
-object "~#p2: Partner" as p22 {
-}
-object "~#p3: Partner" as p32 {
-}
-object "~#p4: Partner" as p42 {
-}
-p12 --> p32: partner
-p32 --> p12: partner
+![](img/partner4.png)
 
-@enduml
-```
 ## Gjøremål
 Oppgaven er (enkelt og greit) å implementere `Partner`-klassen og sjekke (f.eks. med en `main`-metode) at Partner-objektene oppfører seg som de skal.
 
