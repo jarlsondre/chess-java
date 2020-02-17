@@ -63,6 +63,26 @@ public class GameController {
     		}
     	}
     }
+    
+    private void handleUp() {
+    	game.moveUp();
+    	drawBoard();
+    }
+    
+    private void handleDown() {
+    	game.moveDown();
+    	drawBoard();
+    }
+    
+    private void handleLeft() {
+    	game.moveLeft();
+    	drawBoard();
+    }
+    
+    private void handleRight() {
+    	game.moveRight();
+    	drawBoard();
+    }
 
     private String getTileColor(Tile tile) {
     	if (game.isSnakeHead(tile)) {
