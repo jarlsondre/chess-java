@@ -65,7 +65,9 @@ public class GameController {
     }
 
     private String getTileColor(Tile tile) {
-        if (tile.isSnake()) {
+    	if (game.isSnakeHead(tile)) {
+    		return "#1db121";
+    	} else if (tile.isSnake()) {
             return "#24d628";
         } else if (tile.isGround()) {
             return "#a26f42";

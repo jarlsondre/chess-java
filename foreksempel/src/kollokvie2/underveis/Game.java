@@ -29,6 +29,10 @@ public class Game {
         }
         snake = new ArrayList<>(tiles);
     }
+    
+    public boolean isSnakeHead(Tile tile) {
+    	return tile == snake.get(0);
+    }
 
     public boolean isTile(int x, int y) {
         return 0 <= x && x < getWidth() && 0 <= y && y < getHeight();
