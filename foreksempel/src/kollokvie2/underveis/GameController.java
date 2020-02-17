@@ -37,9 +37,9 @@ public class GameController {
         game.getTile(8, 3).setGoal();
 
         game.createSnake(Arrays.asList(game.getTile(9, 8), game.getTile(8, 8)));
-             
-
+        
         createBoard();
+        drawBoard();
     }
 
     private void createBoard() {
@@ -54,6 +54,14 @@ public class GameController {
                 board.getChildren().add(tile);
             }
         }
+    }
+    
+    private void drawBoard() {
+    	for (int y = 0; y < game.getHeight(); y++) {
+    		for (int x = 0; x < game.getWidth(); x++) {
+    			board.getChildren().get(x + y * game.getWidth()).setStyle("-fx-background-color: " + getTileColor(game.getTile(x, y)));
+    		}
+    	}
     }
 
     private String getTileColor(Tile tile) {
