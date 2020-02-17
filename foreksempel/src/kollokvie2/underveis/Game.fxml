@@ -18,10 +18,10 @@
             </Pane>
             <Pane maxHeight="75.0" minHeight="75.0" prefHeight="75.0" prefWidth="600.0" GridPane.rowIndex="1">
                <children>
-                   <Button layoutX="100.0" layoutY="5.0" mnemonicParsing="false" prefWidth="60.0" text="Up" />
-                   <Button layoutX="100.0" layoutY="40.0" mnemonicParsing="false" prefWidth="60.0" text="Down" />
-                   <Button layoutX="30.0" layoutY="40.0" mnemonicParsing="false" prefWidth="60.0" text="Left" />
-                   <Button layoutX="170.0" layoutY="40.0" mnemonicParsing="false" prefWidth="60.0" text="Right" />
+                   <Button layoutX="100.0" layoutY="5.0" mnemonicParsing="false" prefWidth="60.0" text="Up" onAction="#handleUp"/>
+                   <Button layoutX="100.0" layoutY="40.0" mnemonicParsing="false" prefWidth="60.0" text="Down" onAction="#handleDown"/>
+                   <Button layoutX="30.0" layoutY="40.0" mnemonicParsing="false" prefWidth="60.0" text="Left" onAction="#handleLeft"/>
+                   <Button layoutX="170.0" layoutY="40.0" mnemonicParsing="false" prefWidth="60.0" text="Right" onAction="#handleRight"/>
                </children>
             </Pane>
          </children>

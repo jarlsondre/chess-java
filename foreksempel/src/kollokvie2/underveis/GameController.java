@@ -64,22 +64,26 @@ public class GameController {
     	}
     }
     
-    private void handleUp() {
+    @FXML
+    public void handleUp() {
     	game.moveUp();
     	drawBoard();
     }
     
-    private void handleDown() {
+    @FXML
+    public void handleDown() {
     	game.moveDown();
     	drawBoard();
     }
     
-    private void handleLeft() {
+    @FXML
+    public void handleLeft() {
     	game.moveLeft();
     	drawBoard();
     }
     
-    private void handleRight() {
+    @FXML
+    public void handleRight() {
     	game.moveRight();
     	drawBoard();
     }
