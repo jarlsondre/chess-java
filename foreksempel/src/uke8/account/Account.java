@@ -11,7 +11,7 @@ public class Account {
 
 	public void withdraw(int amount) {
 		if (balance - amount < 0)
-			System.err.println("Ingen kreditt, Sir.");
+			System.err.println("Ingen kreditt, dude.");
 		else
 			balance -= amount;
 	}
