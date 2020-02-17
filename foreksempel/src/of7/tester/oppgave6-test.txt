@@ -1,0 +1,17 @@
+@Test
+public void testMoveTo() {
+	Department university = new Department();
+	Department computerScience = new Department(university);
+	Department algorithms = new Department(computerScience);
+	Department math = new Department(university);
+	
+	assertTrue("Algorithms should be a sub department of the CS department", computerScience.contains(algorithms));
+	assertFalse("Algorithms should not yet be a sub department of the maths department", math.contains(algorithms));
+	assertNotEquals("Algorithms should not yet have maths as its parent department", math, algorithms.getParentDepartment());
+		
+	algorithms.moveTo(math);
+
+	assertFalse("Algorithms should no longer be a sub department of the CS department", computerScience.contains(algorithms));
+	assertTrue("Algorithms should be a sub department of the maths department", math.contains(algorithms));
+	assertEquals("Algorithms should have maths as its parent department", math, algorithms.getParentDepartment());
+}
