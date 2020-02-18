@@ -34,7 +34,7 @@ Gjør følgende oppgave om debugging og vis frem løsningen til studass på sal:
 
 ### Del 3: Sekvensdiagram
 Lag et [sekvensdiagram](https://www.ntnu.no/wiki/display/tdt4100/Sekvensdiagrammer) som viser samhandlingen mellom et 
-`StringMergingIterator`-objekt og dens argumenter. Dvs. lag et [sekvensdiagrammet](https://www.ntnu.no/wiki/display/tdt4100/Sekvensdiagrammer) 
+`StringMergingIterator`-objekt og dens argumenter. Dvs. lag et [sekvensdiagram](https://www.ntnu.no/wiki/display/tdt4100/Sekvensdiagrammer) 
 som viser hvordan `StringMergingIterator` gjennom metodekall fletter verdiene fra de to gitte iteratorene (som blir tatt inn som argumentene til 
 `StringMergingIterator`-objektet).
 
