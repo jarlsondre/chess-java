@@ -27,7 +27,7 @@ Filer til Twitter-oppgaven skal lagres i `ovinger/src/interfaces.twitter`.
 Disse oppgavene har noe ulik vanskelighetsgrad og omfang, og trolig stigende (i.e. CardContainer den enkleste og StringGrid den vanskeligste). 
 Alle er høyst eksamensrelevante og det anbefales følgelig å ta en titt på alle sammen.
 
-### Del 2: Debugging og sekvensdiagram
+### Del 2: Debugging
 Gjør følgende oppgave om debugging og vis frem løsningen til studass på sal: 
 
 *  [StringMergingIterator](./StringMergingIterator.md)
