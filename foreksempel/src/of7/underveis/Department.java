@@ -12,4 +12,8 @@ public class Department {
 		this.superDepartment = superDepartment;
 	}
 	
+	public Department getSuperDepartment() {
+		return superDepartment;
+	}
+	
 }
