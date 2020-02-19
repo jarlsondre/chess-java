@@ -2,7 +2,7 @@
 
 Denne oppgaven handler om en meta-iterator som kombinerer par av verdier fra to iteratorer til en ny iterator-sekvens ved hjelp av en gitt binær operasjon.
 
-Meta-iteratorer er iteratorer som bruker andre iteratorer som datakilder. Se lysark om teknikken: [Forelesningslysark om meta-iteratorer](https://www.ntnu.no/wiki/display/tdt4100/Forelesningslysark+om+meta-iteratorer)
+Meta-iteratorer er iteratorer som bruker andre iteratorer som datakilder. Se lysark om teknikken: [Forelesningslysark om meta-iteratorer](https://docs.google.com/file/d/0B9IltfWcNirndERTb1RnTGM3YWs/preview)
 
 Du skal lage en ny klasse `BinaryComputingIterator`, som er en *implementasjon* av det innebygde `Iterator<Double>`-grensesnittet. Konstruktøren til `BinaryComputingIterator` skal ta inn to iteratorer og en binær operator, samt to valgfrie standardverdier. Når `next()`-metoden til `BinaryComputingIterator` blir kalt, skal en verdi hentes fra hver av de to iteratorene, den binære operasjonen utføres på disse to verdiene og resultatet returneres. Den binære operasjonen skal spesifiseres ved hjelp av det innebygde `BinaryOperator<Double>`-grensesnittet, som har en `apply`-metode som lar en beregne resultatet av den binære operasjonen. Hvordan en kan opprette funksjonelle grensesnitt kan du lese mer om på [wikisiden om dette](https://www.ntnu.no/wiki/display/tdt4100/Lambda-uttrykk+og+funksjonelle+grensesnitt+i+Java+8).
 
