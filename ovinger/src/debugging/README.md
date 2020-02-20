@@ -1,2 +1,2 @@
-Kildekodemappe for del 2 av Øving 3
-===================================
+Kildekodemappe for øving 3 og øving 6
+=====================================
