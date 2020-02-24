@@ -5,6 +5,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -52,6 +53,19 @@ public class DepartmentTest {
 		assertFalse("Algorithms should no longer be a sub department of the CS department", computerScience.contains(algorithms));
 		assertTrue("Algorithms should be a sub department of the maths department", math.contains(algorithms));
 		assertEquals("Algorithms should have maths as its parent department", math, algorithms.getSuperDepartment());
+	}
+	
+	@Test
+	public void testMoveToCycle() {
+		Department department1 = new Department();
+		Department department2 = new Department(department1);
+		
+		try {
+			department1.moveTo(department2);
+			fail();
+		} catch (IllegalStateException e) {
+			
+		}
 	}
 	
 }

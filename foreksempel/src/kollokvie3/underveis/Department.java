@@ -34,6 +34,11 @@ public class Department {
 	}
 	
 	public void moveTo(Department newSuperDepartment) {
+		if (contains(newSuperDepartment)) {
+			throw new IllegalStateException("Kan ikke flytte en avdeling til en underavdeling av seg selv");
+		}
+		
+		
 		if (superDepartment != null) {
 			superDepartment.removeDepartment(this);
 		}
