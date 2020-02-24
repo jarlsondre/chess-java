@@ -27,4 +27,18 @@ public class Department {
 		}
 	}
 	
+	public boolean contains(Department department) {
+		if (childDepartments.contains(department)) {
+			return true;
+		}
+		
+		for (Department childDepartment : childDepartments) {
+			if (childDepartment.contains(department)) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
 }
