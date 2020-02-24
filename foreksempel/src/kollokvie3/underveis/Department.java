@@ -27,6 +27,24 @@ public class Department {
 		}
 	}
 	
+	private void removeDepartment(Department department) {
+		if (childDepartments.contains(department)) {
+			childDepartments.remove(department);
+		}
+	}
+	
+	public void moveTo(Department newSuperDepartment) {
+		if (superDepartment != null) {
+			superDepartment.removeDepartment(this);
+		}
+		
+		superDepartment = newSuperDepartment;
+		
+		if (superDepartment != null) {
+			superDepartment.addDepartment(this);
+		}
+	}
+	
 	public boolean contains(Department department) {
 		if (childDepartments.contains(department)) {
 			return true;
