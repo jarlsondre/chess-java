@@ -1,0 +1,14 @@
+public static void main(String[] args) {
+	Farm farm = new Farm();
+	Dog dog = new Dog("Ludo", 2);
+	Chicken chicken = new Chicken("Albert Eggstein", 1);
+	
+	farm.addAnimal(dog);
+	farm.addAnimal(chicken);
+	
+	Iterator<Animal> iterator = new FarmIterator(farm);
+	
+	while (iterator.hasNext()) {
+		System.out.println(iterator.next().makeSound());
+	}
+}

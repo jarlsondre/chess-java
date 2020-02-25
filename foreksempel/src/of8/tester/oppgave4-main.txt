@@ -1,0 +1,15 @@
+public static void main(String[] args) {
+	Farm farm = new Farm();
+	Dog dog = new Dog("Ludo", 2);
+	Chicken chicken = new Chicken("Albert Eggstein", 1);
+	
+	farm.addAnimal(dog);
+	farm.addAnimal(chicken);
+	
+	List<Animal> animals = farm.getAnimals();
+	animals.sort(new AnimalComparator());
+	
+	for (Animal animal : animals) {
+		System.out.println(animal.makeSound());
+	}
+}
