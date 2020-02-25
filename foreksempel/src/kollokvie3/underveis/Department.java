@@ -27,4 +27,41 @@ public class Department {
 		}
 	}
 	
+	private void removeDepartment(Department department) {
+		if (childDepartments.contains(department)) {
+			childDepartments.remove(department);
+		}
+	}
+	
+	public void moveTo(Department newSuperDepartment) {
+		if (contains(newSuperDepartment)) {
+			throw new IllegalStateException("Kan ikke flytte en avdeling til en underavdeling av seg selv");
+		}
+		
+		
+		if (superDepartment != null) {
+			superDepartment.removeDepartment(this);
+		}
+		
+		superDepartment = newSuperDepartment;
+		
+		if (superDepartment != null) {
+			superDepartment.addDepartment(this);
+		}
+	}
+	
+	public boolean contains(Department department) {
+		if (childDepartments.contains(department)) {
+			return true;
+		}
+		
+		for (Department childDepartment : childDepartments) {
+			if (childDepartment.contains(department)) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
 }
