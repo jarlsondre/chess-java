@@ -1,4 +1,4 @@
-package kollokvie4.underveis;
+package of9.kode;
 
 public class Dog implements Animal {
 

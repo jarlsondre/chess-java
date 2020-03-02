@@ -1,11 +1,11 @@
-package kollokvie4.kode;
+package of9.underveis;
 
-public class Dog implements Animal {
+public class Chicken implements Animal {
 
 	private String name;
 	private int age;
 	
-	public Dog(String name, int age) {
+	public Chicken(String name, int age) {
 		this.name = name;
 		this.age = age;
 	}
@@ -22,7 +22,7 @@ public class Dog implements Animal {
 
 	@Override
 	public String makeSound() {
-		return name + " says Woof!";
+		return name + " says Kluk!";
 	}
 
 }

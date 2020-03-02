@@ -1,4 +1,4 @@
-package kollokvie4.kode;
+package of9.kode;
 
 import java.util.ArrayList;
 import java.util.List;

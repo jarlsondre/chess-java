@@ -1,4 +1,4 @@
-package kollokvie4.kode;
+package of9.kode;
 
 public interface Animal {
 
