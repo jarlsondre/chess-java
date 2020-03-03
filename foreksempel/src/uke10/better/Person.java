@@ -8,21 +8,21 @@ import java.util.List;
 public class Person implements Comparable<Person>{
 
 	String name;
-	int alder;
+	int age;
 
-	public int getAlder() {
-		return alder;
+	public int getAge() {
+		return age;
 	}
 
 	public Person(String name, int alder) {
 		super();
 		this.name = name;
-		this.alder = alder;
+		this.age = alder;
 	}
 
 	@Override
 	public String toString() {
-		return "Person [name=" + name + "]";
+		return name + " ("+age+")";
 	}
 
 	public Person(String name) {
