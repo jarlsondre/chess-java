@@ -17,6 +17,14 @@ public class Farm {
 		}
 	}
 	
+	public int numberOfAnimals() {
+		return animals.size();
+	}
+	
+	public Animal getAnimal(int index) {
+		return animals.get(index);
+	}
+	
 	public static void main(String[] args) {
 		Farm farm = new Farm();
 		Dog dog = new Dog("Ludo", 2);
