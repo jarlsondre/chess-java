@@ -1,9 +1,10 @@
 package of9.underveis;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public class Farm {
+public class Farm implements Iterable<Animal> {
 
 	public List<Animal> animals = new ArrayList<>();
 	
@@ -33,13 +34,15 @@ public class Farm {
 		farm.addAnimal(dog);
 		farm.addAnimal(chicken);
 		
-		List<Animal> animals = farm.getAnimals();
-		animals.sort(new AnimalComparator());
-		animals.sort((o1, o2) -> o1.getAge() - o2.getAge());
-		
-		for (Animal animal : animals) {
+		for (Animal animal : farm) {
 			System.out.println(animal.makeSound());
 		}
+	}
+
+	@Override
+	public Iterator<Animal> iterator() {
+		return new FarmIterator(this);
+		//return animals.iterator();
 	}
 	
 }
