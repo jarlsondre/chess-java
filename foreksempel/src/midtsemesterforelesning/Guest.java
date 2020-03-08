@@ -54,11 +54,11 @@ public class Guest {
         Room oldRoom = this.room;
         this.room = room;
         // Sjekker at gamle rommet ikke har denne gjesten
-        if (oldRoom != null & oldRoom.getGuest() == this) {
+        if (oldRoom != null && oldRoom.getGuest() == this) {
             oldRoom.setGuest(null);
         }
         // Oppdaterer nye rommet om det trengs
-        if (room != null & this.room.getGuest() != this) {
+        if (this.room != null && this.room.getGuest() != this) {
             this.room.setGuest(this);
         }
 

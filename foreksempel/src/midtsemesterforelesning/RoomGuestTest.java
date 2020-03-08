@@ -5,17 +5,14 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class RoomGuestTest extends TestCase {
-    Guest guest1;
-    Room room1;
-    Room room2;
-    Guest guest2;
+    Guest guest1 = new Guest("g1");;
+    Room room1 = new Room(true, true, 1, 101);
+    Room room2 = new Room(true, true, 1, 102);
+    Guest guest2  = new Guest("g2");;
 
     @Before
     public void setup() {
-        this.guest1 = new Guest("g1");
-        this.guest2 = new Guest("g2");
-        this.room1 = new Room(true, true, 1, 101);
-        this.room2 = new Room(true, true, 2, 102);
+
     }
     @Test
     public void testSetRoom(){
@@ -27,7 +24,7 @@ public class RoomGuestTest extends TestCase {
     @Test
     public void testChangeRoom(){
         guest1.changeRoom(room1);
-        guest2.changeRoom(room2);
+        guest1.changeRoom(room2);
         assertEquals(room2, guest1.getRoom());
         assertEquals(guest1, room2.getGuest());
         assertNull(room1.getGuest());
@@ -36,7 +33,7 @@ public class RoomGuestTest extends TestCase {
     public void testChangeOccupiedRoom(){
         guest1.changeRoom(room1);
         guest2.changeRoom(room2);
-        guest2.changeRoom(room2);
+        guest1.changeRoom(room2);
         assertEquals(room2, guest1.getRoom());
         assertEquals(guest1, room2.getGuest());
         assertNull(room1.getGuest());
