@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Farm implements Iterable<Animal> {
 
@@ -34,6 +35,18 @@ public class Farm implements Iterable<Animal> {
 		return new FarmIterator(this);
 	}
 	
+	public List<String> getAnimalNames() {
+		return animals.stream()
+				.map((animal) -> animal.getName())
+				.distinct()
+				.collect(Collectors.toList());
+	}
+	
+	public void newYear() {
+		animals.stream().forEach((animal) -> animal.incrementAge());
+		//animals.stream().forEach(Animal::incrementAge);
+	}
+	
 	/*public static void main(String[] args) {
 		List<Animal> animals = Arrays.asList(new Dog("Ludo", 12), new Dog("Fido", 0), new Chicken("Peter", 1),
 				new Chicken("Albert", 4));
@@ -52,21 +65,10 @@ public class Farm implements Iterable<Animal> {
 		farm.addAnimal(new Dog("Ludo", 12));
 		farm.addAnimal(new Dog("Fido", 0));
 		farm.addAnimal(new Chicken("Peter", 1));
-		farm.addAnimal(new Chicken("Albert", 4));
-		
-		Iterator<Animal> iterator = new YoungAnimalsIterator(farm);
-		while (iterator.hasNext()) {
-			System.out.println(iterator.next().makeSound());
-		}
-		
-		farm.getAnimal(1).incrementAge();
-		farm.getAnimal(2).incrementAge();
-		System.out.println();
-		
-		iterator = new YoungAnimalsIterator(farm);
-		while (iterator.hasNext()) {
-			System.out.println(iterator.next().makeSound());
+		farm.addAnimal(new Chicken("Peter", 4));
+
+		for (String name : farm.getAnimalNames()) {
+			System.out.println(name);
 		}
 	}
-	
 }
