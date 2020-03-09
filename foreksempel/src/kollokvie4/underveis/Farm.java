@@ -39,10 +39,11 @@ public class Farm implements Iterable<Animal> {
 		farm.addAnimal(new Chicken("Peter", 1));
 		farm.addAnimal(new Chicken("Albert", 4));
 		
-		Iterator<Animal> iterator = new YoungAnimalsIterator(farm);
+		Iterator<Animal> iterator = new FilterAnimalsIterator(farm, new YoungAnimalPredicate());
 		while (iterator.hasNext()) {
 			System.out.println(iterator.next().makeSound());
 		}
 	}
+
 	
 }

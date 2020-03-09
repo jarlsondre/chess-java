@@ -2,20 +2,24 @@ package kollokvie4.underveis;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+import java.util.function.Predicate;
 
-public class YoungAnimalsIterator implements Iterator<Animal> {
+public class FilterAnimalsIterator implements Iterator<Animal> {
 
 	private Farm farm;
 	private int index;
+	private Predicate<Animal> predicate;
 	
-	public YoungAnimalsIterator(Farm farm) {
+	public FilterAnimalsIterator(Farm farm, Predicate<Animal> predicate) {
 		this.farm = farm;
+		this.predicate = predicate;
 	}
 
 	@Override
 	public boolean hasNext() {
 		while (index < farm.numberOfAnimals()) {
-			if (farm.getAnimal(index).getAge() < 2) {
+			if (predicate.test(farm.getAnimal(index))) {
+			//if (farm.getAnimal(index).getAge() < 2) {
 				return true;
 			}
 			
