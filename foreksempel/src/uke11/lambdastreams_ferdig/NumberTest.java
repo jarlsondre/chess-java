@@ -1,4 +1,4 @@
-package uke11.lambdastreams;
+package uke11.lambdastreams_ferdig;
 
 import java.util.Arrays;
 import java.util.Comparator;

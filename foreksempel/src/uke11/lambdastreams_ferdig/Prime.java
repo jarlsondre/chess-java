@@ -1,4 +1,4 @@
-package uke11.lambdastreams;
+package uke11.lambdastreams_ferdig;
 
 import java.util.function.IntPredicate;
 import java.util.stream.IntStream;
