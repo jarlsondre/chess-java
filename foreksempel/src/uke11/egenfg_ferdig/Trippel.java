@@ -10,6 +10,6 @@ package uke11.egenfg_ferdig;
 public interface Trippel {
 
 	// Det eneste vi kan gjøre her. Det er opp til implementasjonen å kverne på tallene.
-	public abstract int beregn(int a, int b, int c);
+	public int beregn(int a, int b, int c);
 	
 }
