@@ -31,4 +31,9 @@ public class Chicken implements Animal {
 		return Integer.compare(age, other.getAge());
 	}
 
+	@Override
+	public void incrementAge() {
+		age++;
+	}
+
 }

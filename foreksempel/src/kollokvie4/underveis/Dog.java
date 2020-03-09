@@ -30,5 +30,10 @@ public class Dog implements Animal {
 	public int compareTo(Animal other) {
 		return Integer.compare(age, other.getAge());
 	}
+
+	@Override
+	public void incrementAge() {
+		age++;
+	}
 	
 }
