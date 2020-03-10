@@ -109,7 +109,7 @@ public class FilEksempler {
 //        Scanner scnr = new Scanner(text);
 		
 		Scanner scanner = new Scanner(new BufferedReader(new InputStreamReader(is)));
-		scanner.useDelimiter("\n"); // Ellers splitter den på komma.
+		scanner.useDelimiter("\n"); // Ellers splitter den på komma...
 		
 		// Hoppe over første linje.
 		scanner.next();
