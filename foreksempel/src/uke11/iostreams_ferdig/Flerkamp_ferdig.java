@@ -43,8 +43,8 @@ public class Flerkamp_ferdig {
 			// n er linjen, n settes til kall på fromCols med en liste av strenger
 			.map(n -> fromCols(n.split(",\\s*"))) // Splitter på "," og valgfritt antall mellomrom. (søk opp regexp)
 
-			// d er Deltakerobjekter fra linjen over. Nå legges hvert av dem til i lista.
-			.collect(Collectors.toList()); // Legg hvert Deltakerobjekt til deltakerlisten.
+			// fromCols lager Personer. La oss samle disse i en liste og returnere alle:
+			.collect(Collectors.toList()); 
 		} catch (IOException e) {
 			// Har ikke gjort noe spesielt med feilhåndteringen.
 			e.printStackTrace();
