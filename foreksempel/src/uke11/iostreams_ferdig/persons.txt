@@ -1,0 +1,2 @@
+name:Hallvard Traetteberg, email:hallvard.traetteberg@ntnu.no
+name:Borge Haugset, email:borge.haugset@ntnu.no
