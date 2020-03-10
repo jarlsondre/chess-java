@@ -21,7 +21,7 @@ Gjennomfør enten *minst én* av oppgavene om delegering:
 
 ELLER *minst én* av oppgavene om observatør-observert-teknikken:
 * [StockListener (ovinger/src/patterns.observable)](./StockListener.md)
-* [Highscore (ovinger/src/patterns.observable)](./Highscore.md)
+* [Highscore (ovinger/src/patterns.observable)](./HighscoreList.md)
 
 Oppgavene skal lagres i mappene som er spesifisert i parentes etter oppgavene.
 
