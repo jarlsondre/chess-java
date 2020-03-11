@@ -1,2 +1,2 @@
-# Kildekodemappe for Øving 8 - Observable
-================================================
+# Kildekodemappe for Ã¸ving 8 - Observable
+=========================================

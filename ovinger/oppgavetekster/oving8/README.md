@@ -9,10 +9,10 @@
 * Kunne la en klasse delegere utførelsen av oppgaver til interne objekter
 
 ## Dette må du gjøre
-Denne øvingen omfatter både [delegeringsteknikken](https://www.ntnu.no/wiki/display/tdt4100/Delegeringsteknikken) og 
-[observatør-observert-teknikken](https://www.ntnu.no/wiki/pages/viewpage.action?pageId=66879660), og **begge disse teknikkene
-skal du kunne forklare for studass ved godkjenning**. Minstekravet for å få øvingen 
-godkjent er å gjennomføre **mint én** av de fire oppgavene under. Det anbefales derimot på det *sterkeste* å gjøre minst én oppgave 
+
+Denne øvingen omfatter både [delegeringsteknikken](https://www.ntnu.no/wiki/display/tdt4100/Delegeringsteknikken) og
+[observatør-observert-teknikken](https://www.ntnu.no/wiki/pages/viewpage.action?pageId=66879660). Minstekravet for å få øvingen
+godkjent er å gjennomføre **mint én** av de fire oppgavene under. Det anbefales derimot på det *sterkeste* å gjøre minst én oppgave
 fra hvert av de to temaene, siden dette må til for å dekke hele pensum.
 
 Gjennomfør enten *minst én* av oppgavene om delegering:
@@ -25,7 +25,7 @@ ELLER *minst én* av oppgavene om observatør-observert-teknikken:
 
 Oppgavene skal lagres i mappene som er spesifisert i parentes etter oppgavene.
 
-##### `NB! Du skal kunne beskrive begge teknikkene som denne øvingen omhandler muntlig for studass ved godkjenning.`
+**I tillegg til oppgaven(e) ovenfor skal du levere en tekstfil hvor du gjør kort rede for delegeringsteknikken og observatør-observert-teknikken.**
 
 ### Hjelp / mistanke om bugs
 Ved spørsmål eller behov for hjelp konsulter studassen din i saltiden hans / hennes. Du kan også oppsøke andre studasser på sal eller legge ut et innlegg på [Piazza](https://piazza.com/).

@@ -1,2 +1,2 @@
-# Kildekodemappe for Øving 8 - Delegation
-================================================
+# Kildekodemappe for Ã¸ving 8 - Delegation
+=========================================
