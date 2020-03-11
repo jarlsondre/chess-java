@@ -51,7 +51,7 @@ Lyttere som er registrert med denne metoden skal bare varsles dersom **Stock**-o
 
 I denne utvidelsen skal du støtte lyttere som ønsker å få beskjed kun når akkumulerte endringer av **Stock**-objektets pris er større enn en gitt differanse. Følgende metode må implementeres:
 
-**void addStockListener(StockListener, double difference)** - metode som legger til lyttere med krav til prisdifferanse.
+- `void addStockListener(StockListener, double difference)` - metode som legger til lyttere med krav til prisdifferanse.
 
 Et viktig poeng med denne er varianter er hvilke tidligere verdien som skal gis til lyttermetoden **stockPriceChanged** sitt andre argument. Denne verdien skal være den forrige verdien som ble rapportert, som kan være en annen enn den forrige prisverdien. Anta f.eks. at en lytter registreres med **10** som prisdifferanse og at aksjeprisen starter som **110** og så endres til **118** og videre til **121**. Da skal lyttermetoden **stockPriceChanged** kalles med **110** som gammel verdi og **121** som ny verdi, fordi dette sett fra lytterens perspektiv er forrige verdi den fikk vite om. En annen lytter som var registrert med prisdifferansen **5**, ville fått beskjed allerede ved første endring og da med **110** som gammel verdi og **118** som ny, men den ville ikke få beskjed om endringen fra **118** til **121**, fordi differansen da er for liten. Dersom prisen endrer seg videre til **124**, vil lytteren få beskjed og da med **118** som gammel verdi.
 

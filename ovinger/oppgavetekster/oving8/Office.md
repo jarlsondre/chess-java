@@ -13,7 +13,7 @@ Vi skal i dette scenarioet ha en sjef, eller **Manager**, som har én eller fler
 
 **Employee**-grensesnittet har følgende metoder:
 
-`double doCalculations(BinaryOperator<Double> operation, double value1, double value2)` - regner ut resultatet av å utføre **operation** med argumentene **value1** og **value2**.
+- `double doCalculations(BinaryOperator<Double> operation, double value1, double value2)` - regner ut resultatet av å utføre **operation** med argumentene **value1** og **value2**.
 - `void printDocument(String document)` - Printer **document**. Hvordan dette gjøres avhenger av den spesifikke implementasjonen.
 - `int getTaskCount()` - returnerer hvor mange oppgaver (beregninger og printinger) som har blitt utført av eller på vegne av dette **Employee**-objektet.
 - `int getResourceCount()` - antallet employees til rådighet, inkludert **Employee**-objektet metoden blir kalt på. En **Employee** skal altså medregne seg selv i antall ressurser den ansatte har til rådighet. Dette tallet skal inkludere alle **Employee**-objekter nedover i hierarkiet.
@@ -27,7 +27,7 @@ Lag dette grensesnittet, og lag så en **Clerk**-klasse som implementerer det. *
 Definer en **Printer**-klasse med følgende metoder:
 
 - `void printDocument(String document, Employee employee)` - skriver documentet til konsollen og tar vare på dokumentet i **employee** sin historikk.
-- `List<String> getPrintHistory(Employee employee)` - returnerer en `List<String>` med alle dokumentene som har blitt printet av `employee` av denne printeren i rekkefølgen de har blitt printet.
+- `List<String> getPrintHistory(Employee employee)` - returnerer en **List<String>** med alle dokumentene som har blitt printet av **employee** av denne printeren i rekkefølgen de har blitt printet.
 
 La så **Clerk** delegere **printDocument** til **Printer**. Siden **Clerk** ikke har noen andre ansatte å delegere til, vil **getResourceCount()** alltid være 1.
 

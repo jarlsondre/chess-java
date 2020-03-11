@@ -35,8 +35,8 @@ Vi foreslår følgende metoder og oppførsel:
 
 Klassediagrammet viser hvordan klassene henger sammen, og vårt forslag til metoder:
 
+![](images/hl-program.png)
+
 **Exercise-panelet**
 
 Bruk av Exercise-panelet er obligatorisk for denne øvingen. Du må ha panelet åpent med **HighscoreList.ex**-filen (**tests > patterns.observable > HighscoreList.ex**) i før du begynner med oppgaven. For mer informasjon/hjelp, se nederst på forrige side, altså hovedsiden for [Øving 8](./README.md).
-
-![](images/hl-program.png)

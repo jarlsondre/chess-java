@@ -4,7 +4,7 @@ Denne oppgaven bruker delegeringsteknikken for å implementere en fleksibel måt
 
 ## Logging
 
-Ved kjøring av programmer er det ofte behov for å logge hva som skjer underveis, slik at det blir lettere å drive feilsøking i etterkant. F.eks. kan en lagre feilmeldinger til fil, med tidspunkt og litt om programtilstanden og hvis programmet kræsjer ordentlig, så kan brukeren sende logg-fila som e-post til utviklerne. En enkel måte å støtte logging på er å lage en hjelpeklasse med én metode, f.eks. log(String melding), og så er det hjelpeklassen som bestemmer om meldingen skal vises i statuslinja, skrives til fil, sendes som melding til en alarmsentral osv. Hjelpeklassen kan kanskje brukes av mange programmer, og siden behovene vil variere er det viktig å gjøre dette fleksibelt. Denne oppgaven bruker [grensesnitt](https://www.ntnu.no/wiki/pages/viewpage.action?pageId=65936813) og [delegeringsteknikken](https://www.ntnu.no/wiki/display/tdt4100/Delegeringsteknikken) for å implementere fleksibel logging, litt på samme måte som eksisterende loggingsrammeverk (se f.eks. [Java sin egen loggingsfunksjonalitet](http://docs.oracle.com/javase/6/docs/technotes/guides/logging/overview.html), Apache sitt [log4j-rammeverk](http://logging.apache.org/log4j/), Eclipse sin innebygde [loggingsmekanisme](http://www.vogella.com/tutorials/EclipseLogging/article.html#logging) eller Google ["Java logging framework"](https://www.google.no/search?q=java+logging+frameworks)).
+Ved kjøring av programmer er det ofte behov for å logge hva som skjer underveis, slik at det blir lettere å drive feilsøking i etterkant. F.eks. kan en lagre feilmeldinger til fil, med tidspunkt og litt om programtilstanden og hvis programmet kræsjer ordentlig, så kan brukeren sende logg-fila som e-post til utviklerne. En enkel måte å støtte logging på er å lage en hjelpeklasse med én metode, f.eks. `log(String melding)`, og så er det hjelpeklassen som bestemmer om meldingen skal vises i statuslinja, skrives til fil, sendes som melding til en alarmsentral osv. Hjelpeklassen kan kanskje brukes av mange programmer, og siden behovene vil variere er det viktig å gjøre dette fleksibelt. Denne oppgaven bruker [grensesnitt](https://www.ntnu.no/wiki/pages/viewpage.action?pageId=65936813) og [delegeringsteknikken](https://www.ntnu.no/wiki/display/tdt4100/Delegeringsteknikken) for å implementere fleksibel logging, litt på samme måte som eksisterende loggingsrammeverk (se f.eks. [Java sin egen loggingsfunksjonalitet](http://docs.oracle.com/javase/6/docs/technotes/guides/logging/overview.html), Apache sitt [log4j-rammeverk](http://logging.apache.org/log4j/), Eclipse sin innebygde [loggingsmekanisme](http://www.vogella.com/tutorials/EclipseLogging/article.html#logging) eller Google ["Java logging framework"](https://www.google.no/search?q=java+logging+frameworks)).
 
 ### ILogger-grensesnittet
 
@@ -27,7 +27,7 @@ ILogger-grensesnittet definerer én log-metode som brukes til all logging:
 
 En typisk bruk vil være i **catch**-delen av en **try/catch**:
 
-```
+```java
 ILogger logger = ...
 ...
 try {
@@ -43,9 +43,11 @@ Akkurat hvordan logging utføres bestemmes av hvilken implementasjon av ILogger-
 - **FilteringLogger** - delegerer til en annen logger, men kun for spesifikke alvorlighetsgrader
 - **StreamLogger** - skriver logg-meldingen til en angitt strøm
 
+Hver av disse utgjør én av deloppgavene beskrevet under.
+
 ## Del 1 - StreamLogger
 
-En **StreamLogger** sørger for å skrive alle logg-meldinger til en angitt **OutputStream**, med én melding pr. linje (altså linjeskift mellom hver melding). OutputStream-objektet må gis inn i konstruktøren:
+En **StreamLogger** sørger for å skrive alle logg-meldinger til en angitt **OutputStream**, med én melding pr. linje (altså linjeskift mellom hver melding). **OutputStream**-objektet må gis inn i konstruktøren:
 
 - `StreamLogger(OutputStream stream)` - initialiserer **StreamLogger**-objektet slik at logg-meldinger skrives til **stream**.
 
