@@ -18,6 +18,9 @@ public class GameController {
     
     @FXML
     TextField filename;
+    
+    @FXML
+    Text fileNotFoundMessage;
 
     @FXML
     public void initialize() {
