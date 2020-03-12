@@ -36,10 +36,9 @@ public class Flerkamp_ferdig {
 
 			// Lese fra denne filen som en strøm.
 			deltakere = Files.lines(path)
-
+					
 			// Nå er hvert objekt en String, linje fra filen.
 			.skip(1) // Den første linjen er overskrift, dropper den.
-
 			// n er linjen, n settes til kall på fromCols med en liste av strenger
 			.map(n -> fromCols(n.split(",\\s*"))) // Splitter på "," og valgfritt antall mellomrom. (søk opp regexp)
 
@@ -107,6 +106,9 @@ public class Flerkamp_ferdig {
 		for (Deltaker deltaker : fk.deltakere) {
 			System.out.println(deltaker.getName() + "\t" + deltaker.getBalloonshooting());
 		}
+		
+		fk.deltakere.stream()
+		.forEach(System.out::println);
 	}
 
 

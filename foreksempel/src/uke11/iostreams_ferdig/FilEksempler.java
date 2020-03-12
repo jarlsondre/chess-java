@@ -50,8 +50,8 @@ public class FilEksempler {
 
 
 	private static void print_Writer() throws FileNotFoundException {
-		PrintWriter writer = new PrintWriter ("C:/Users/borgeha/test.txt");
-		writer.println("Hei hopp hvor det går, hilsen Børge");
+		PrintWriter writer = new PrintWriter ("C:/Users/borgeha/print_test.txt");
+		writer.println("Tror du de skjønner noe ennå?");
 		writer.close();
 
 	}
@@ -126,7 +126,7 @@ public class FilEksempler {
 //		FilEksempler.file_Reader();
 //		FilEksempler.useURL(new URL("http://www.foad.org/%7Eabigail/").openStream());
 //		FilEksempler.print_Writer();
-		FilEksempler.bufferedInputStream_Reader(new URL("https://www.db.no").openStream());
+//		FilEksempler.bufferedInputStream_Reader(new URL("https://www.db.no").openStream());
 //		FilEksempler.buffered_Writer("filnavnet_tdt4100.txt");
 //		FilEksempler.PrintStream();
 //		FilEksempler fe = new FilEksempler();
