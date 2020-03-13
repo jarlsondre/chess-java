@@ -2,14 +2,14 @@
 
 Denne oppgaven handler om å lage en felles superklasse `CardContainerImpl`
 for `CardDeck`- og `CardHand`-klassene, laget i [Card-oppgaven](../oving5/Card.md) 
-og [CardContainer-oppgaven](../ovin6/CardContainer.md).
+og [CardContainer-oppgaven](../oving6/CardContainer.md).
 
 **Merk:** Om du ikke har gjort Card-oppgaven og CardContainer-oppgaven allerede,
 kan du bruke løsningsforslaget som er lagt ut for disse under `lf/src/interfaces`.
 
 ### Del 1 - Superklassen CardContainerImpl
 Lag en `CardContainerImpl`-superklasse, som implementerer grensesnittet 
-`CardContainer` (se [CardContainer-oppgaven](../ovin6/CardContainer.md)) og 
+`CardContainer` (se [CardContainer-oppgaven](../oving6/CardContainer.md)) og 
 inneholder koden som er felles for `CardDeck` og `CardHand`.
 
 La `CardDeck` og `CardHand` arve `CardContainerImpl` og gjør nødvendige endringer
