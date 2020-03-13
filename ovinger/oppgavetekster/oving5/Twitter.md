@@ -2,12 +2,12 @@
 
 Denne oppgaven handler om en begrenset klone av `Twitter`, med to klasser, `TwitterAccount` og `Tweet`.
 
-En Twitter-konto kan følge andre Twitter-kontoer og motsatt: en Twitter-konto kan bli fulgt av andre Twitter-kontoer. 
+En Twitter-konto kan følge andre Twitter-kontoer og motsatt: en Twitter-konto kan bli fulgt av andre Twitter-kontoer.
 Dette er altså en gjensidig kobling: Hvis konto A følger konto B, så er konto B fulgt av konto A. En kan selvsagt ikke følge seg selv.
 
-I tillegg har hver Twitter-konto en mengde *tweets*, som er små, korte tekster. En tweet hører til den kontoen den ble sendt fra. 
-Hvis noen finner en annen sin tweet interessant har man muligheten til å retweete denne. Da lager man en tweet som refererer til originalen, 
-og (implisitt) få original-tweeten sin tekst. Merk at i en kjede av retweets, så vil alle referere til samme original-tweet. Mao., 
+I tillegg har hver Twitter-konto en mengde *tweets*, som er små, korte tekster. En tweet hører til den kontoen den ble sendt fra.
+Hvis noen finner en annen sin tweet interessant har man muligheten til å retweete denne. Da lager man en tweet som refererer til originalen,
+og (implisitt) få original-tweeten sin tekst. Merk at i en kjede av retweets, så vil alle referere til samme original-tweet. Mao.,
 hvis tweet B er en retweet av A og tweet C er en retweet av B, vil både tweet B og C ha A som original-tweet, slik det er vist under.
 
 **Riktig objektstrutur**, når B er en retweet av A og C er en retweet av B:
@@ -53,23 +53,25 @@ hvis tweet B er en retweet av A og tweet C er en retweet av B, vil både tweet B
 ## Del 1
 
 * Implementer `Tweet`-klassen.
-* For å teste klassen må du sende inn TwitterAccount-objekter i konstruktøren. Lag en forenklet versjon av `TwitterAccount`-klassen 
-for dette formålet, der du kun implementerer konstruktøren og evt. en passende toString(). Dette gjør det mulig å teste `Tweet`-klassen 
+* For å teste klassen må du sende inn TwitterAccount-objekter i konstruktøren. Lag en forenklet versjon av `TwitterAccount`-klassen
+for dette formålet, der du kun implementerer konstruktøren og evt. en passende toString(). Dette gjør det mulig å teste `Tweet`-klassen
 din uten at du må implementere hele `TwitterAccount`-klassen først.
 
 ## Del 2
 * Implementer `TwitterAccount`-klassen.
-* Test klassen og dens samspill med `Tweet`-klassen ved å lage Twitter-konto for deg selv og noen av vennene dine. 
+* Test klassen og dens samspill med `Tweet`-klassen ved å lage Twitter-konto for deg selv og noen av vennene dine.
 La noen av kontoene følge hverandre, tweete og retweete.
 
+Testkode for denne oppgaven finner du her: [objectstructures/TweetTest.java](../../tests/objectstructures/TweetTest.java) og [TwitterAccountTest.java](../../tests/objectstructures/TwitterAccountTest.java). Original-koden (jextest) finner du her: [objectstructures/Tweet.jextest](../../tests/objectstructures/Tweet.jextest) og [objectstructures/TwitterAccount.jextest](../../tests/objectstructures/TwitterAccount.jextest).
+
 ## Frivillig utvidelse
-På Twitter kan man markere en annen sin tweet som en favoritt. Implementer passende metoder for å kunne gjøre dette. 
-En konto må ha oversikt over hvilke tweets den har markert som favoritter, og en tweet må vite hvem og hvor mange som har markert den 
+På Twitter kan man markere en annen sin tweet som en favoritt. Implementer passende metoder for å kunne gjøre dette.
+En konto må ha oversikt over hvilke tweets den har markert som favoritter, og en tweet må vite hvem og hvor mange som har markert den
 som favoritt. Hva synes du burde skje hvis man markerer en retweet som en favoritt?
 
 ## Exercise-panelet
 
-Bruk av Exercise-panelet er obligatorisk for denne oppgaven. Du må ha panelet åpent med `Twitter.ex`-filen 
+Bruk av Exercise-panelet er obligatorisk for denne oppgaven. Du må ha panelet åpent med `Twitter.ex`-filen
 (`tests > objectstructures > Twitter.ex`) i før du begynner med oppgaven. For mer informasjon/hjelp, se nederst på hovedsiden for Øving 5.
 
 

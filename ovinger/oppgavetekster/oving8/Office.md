@@ -31,6 +31,10 @@ Definer en **Printer**-klasse med følgende metoder:
 
 La så **Clerk** delegere **printDocument** til **Printer**. Siden **Clerk** ikke har noen andre ansatte å delegere til, vil **getResourceCount()** alltid være 1.
 
+Testkode for Clerk er her: [delegation/office/ClerkTest.java](../../tests/patterns/delegation/office/ClerkTest.java) Originalkoden for testen(jextest) kan du finne her: [delegation/office/Clerk.jextest](../../tests/patterns/delegation/office/Clerk.jextest)
+
+Testkode for Printer er her: [delegation/office/PrinterTest.java](../../tests/patterns/delegation/office/PrinterTest.java) Originalkoden for testen(jextest) kan du finne her: [delegation/office/Printer.jextest](../../tests/patterns/delegation/office/Printer.jextest)
+
 ## Del 2: Manager
 
 Vi definerer så sjefen til de hardt-arbeidende **Clerk**-objektene. **Manager**-klassen har følgende konstruktør:
@@ -38,6 +42,8 @@ Vi definerer så sjefen til de hardt-arbeidende **Clerk**-objektene. **Manager**
 - `Manager (Collection<Employee> employees)` - utløser et **IllegalArgumentException** dersom employees er tom.
 
 La så **Manager** implementere **Employee**-grensesnittet. Implementer **Manager**s oppgaver ved å delegere alle videre til en av arbeiderne i listen med **Employee**-objekter gitt i konstruktøren. Regelen for hvilken **Employee** som får hvilken oppgave delegert til seg kan du bestemme selv, men prøv å gjøre det slik at arbeidet fordeles jevnt på alle. Mens **Clerk** altså har kun én tilgjengelig ressurs vil **Manager**-objekter vil ha flere.
+
+Testkode for Manager er her: [delegation/office/ManagerTest.java](../../tests/patterns/delegation/office/ManagerTest.java) Originalkoden for testen(jextest) kan du finne her: [delegation/office/Manager.jextest](../../tests/patterns/delegation/office/Manager.jextest)
 
 ## Del 3: Main-metode
 
@@ -48,3 +54,4 @@ Lag først et **Manager**-objekt som blir tildelt noen **Clerk**-objekter under 
 **Exercise-panelet**
 
 Bruk av Exercise-panelet er obligatorisk for denne øvingen. Du må ha panelet åpent med **Office.ex**-filen (**tests > patterns.delegation.office > Office.ex**) i før du begynner med oppgaven. For mer informasjon/hjelp, se nederst på forrige side, altså hovedsiden for [Øving 8](./README.md).
+

@@ -27,6 +27,8 @@ Det skal være mulig å opprette nye stoppeklokker med et tilhørende navn (stre
 
 Kopier `StopWatch` fra `encapsulation`-pakken og lag `StopWatchManager` som beskrevet over. Test klassen med selvlagde main-metoder og ved å kjøre JUnit-testene.
 
+Testkode for denne oppgaven finner du her: [objectstructures/StopWatchTest.java](../../tests/objectstructures/StopWatchTest.java) og [objectstructures/StopWatchManagerTest.java](../../tests/objectstructures/StopWatchManagerTest.java). Originalkoden (jextest) du her: [objectstructures/StopWatch.jextest](../../tests/objectstructures/StopWatch.jextest) og [objectstructures/StopWatchManager.jextest](../../tests/objectstructures/StopWatchManager.jextest).
+
 **Exercise-panelet**
 
 Bruk av Exercise-panelet er obligatorisk for denne oppgaven. Du må ha panelet åpent med `StopWatch.ex`-filen (`tests > objectstructures > StopWatch.ex`) i før du begynner med oppgaven. For mer informasjon/hjelp, se nederst på hovedsiden for [Øving 5](./README.md).

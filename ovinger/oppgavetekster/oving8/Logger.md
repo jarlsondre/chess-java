@@ -73,6 +73,8 @@ String logMessage = String.format(formatString, severity, message, exception);
 
 Merk at dersom format-string-en ikke er satt, så skal den ha en fornuftig start-verdi.
 
+Testkode for oppgaven: [patterns/delegation/StreamLoggerTest.java](../../tests/patterns/delegation/StreamLoggerTest.java). Originalkoden for testen (jextest) kan du finne her: [patterns/delegation/StreamLogger.jextest](../../tests/patterns/delegation/StreamLogger.jextest)
+
 ## Del 2 - FilteringLogger
 
 **FilteringLogger**-klassen implementerer **ILogger**-grensesnittet og delegerer til en annen **ILogger**-implementasjon, men bare hvis *alvorlighetsgraden* er en av et sett angitte verdier. Både loggeren det delegeres til og alvorlighetsgradene angis når **FilteringLogger**-objektet opprettes:
@@ -96,6 +98,8 @@ logger.setIsLogging(ILogger.WARNING, true);
 logger.log(ILogger.WARNING, "Denne meldingen er en advarsel og blir nå skrevet til System.err", null);
 ```
 
+Testkode for oppgaven: [patterns/delegation/FilteringLoggerTest.java](../../tests/patterns/delegation/FilteringLoggerTest.java). Originalkoden for testen (jextest) kan du finne her: [patterns/delegation/FilteringLogger.jextest](../../tests/patterns/delegation/FilteringLogger.jextest).
+
 ## Del 3 - DistributingLogger
 
 **DistributingLogger**-klassen brukes for å fordele logg-meldinger til en av tre andre loggere, avhengig av *alvorlighetsgraden* til en logg-melding. Den har én hjelpe-logger for meldinger med alvorlighetsgrad **ERROR**, én for meldinger av alvorlighetsgrad **WARNING** og en for meldinger av alvorlighetsgrad **INFO**. Alle disse angis til konstruktøren:
@@ -118,6 +122,8 @@ logger.log(ILogger.INFO, "Denne meldingen er til informasjon og skrives til Syst
 logger.setLogger(ILogger.WARNING, sysoutLogger);
 logger.log(ILogger.WARNING, "Denne meldingen er en advarsel, men nå skrives den til System.out", null);
 ```
+
+Testkode for oppgaven: [patterns/delegation/DistributingLoggerTest.java](../../tests/patterns/delegation/DistributingLoggerTest.java). Originalkoden for testen (jextest) kan du finne her: [patterns/delegation/DistributingLogger.jextest](../../tests/patterns/delegation/DistributingLogger.jextest).
 
 **Exercise-panelet**
 

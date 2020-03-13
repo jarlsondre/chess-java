@@ -21,6 +21,8 @@ Her er en oversikt over metoden som må implementeres:
 
 Klassediagram for **HighscoreList** og **HighscoreListListener**:
 
+Testkode for denne oppgaven finner du her: [patterns/observable/HighscoreListTest.java](../../tests/patterns/observable/HighscoreListTest.java). Original-koden (jextest) finner du her: [patterns/observable/HighscoreList.jextest](../../tests/patterns/observable/HighscoreList.jextest).
+
 ![](images/highscore-list.png)
 
 ## Del 2: Hovedprogramklasse

@@ -24,6 +24,8 @@ Foreløpig er **Stock** ikke observerbar. For at observatører skal kunne holdes
 
 Observatørene skal holdes oppdatert på prisendringer. Derfor må lyttermetoden kalles hos alle registrerte observatører når aksjeprisen endres med **setPrice**-metoden.
 
+Testkode for denne oppgaven finner du her: [patterns/observable/StockTest.java](../../tests/patterns/observable/StockTest.java). Original-koden (jextest) finner du her: [patterns/observable/Stock.jextest](../../tests/patterns/observable/Stock.jextest).
+
 ## Del 2: StockIndex implements StockListener
 
 Vi skal nå lage en veldig forenklet versjon av en aksjeindeks. I korte trekk bruker man en aksjeindeks til å måle utviklingen av et utvalg aksjer. Vår enkle, fiktive aksjeindeks **StockIndex** har et navn (**String**), indeks (**double**) og en liste med **Stock**-objektene som er inkludert i indeksen. Indeksen beregnes ut i fra aksjeprisene den "observerer", og vil være lik summen av disse. Når en av aksjeprisene øker eller synker, må tilstanden til **StockIndex**-objektet holdes konsistent med denne utviklingen. Dette lar seg gjøre ved at **StockIndex** observerer én eller flere **Stock**-objekter. Klassen skal ha følgende metoder:
@@ -34,6 +36,8 @@ Vi skal nå lage en veldig forenklet versjon av en aksjeindeks. I korte trekk br
 - `double getIndex()` - hentemetode for indeksen.
 
 I tillegg må **StockIndex**-klassen selvsagt implementere **StockListener** og dermed også lyttermetoden **stockPriceChanged**, slik at indeksen kan holdes oppdatert.
+
+Testkode for denne oppgaven finner du her: [patterns/observable/StockIndexTest.java](../../tests/patterns/observable/StockIndexTest.java). Original-koden (jextest) finner du her: [../../tests/patterns/observable/StockIndex.jextest](../../tests/patterns/observable/StockIndex.jextest).
 
 ## Ekstraoppgaver
 
@@ -54,6 +58,8 @@ I denne utvidelsen skal du støtte lyttere som ønsker å få beskjed kun når a
 - `void addStockListener(StockListener, double difference)` - metode som legger til lyttere med krav til prisdifferanse.
 
 Et viktig poeng med denne er varianter er hvilke tidligere verdien som skal gis til lyttermetoden **stockPriceChanged** sitt andre argument. Denne verdien skal være den forrige verdien som ble rapportert, som kan være en annen enn den forrige prisverdien. Anta f.eks. at en lytter registreres med **10** som prisdifferanse og at aksjeprisen starter som **110** og så endres til **118** og videre til **121**. Da skal lyttermetoden **stockPriceChanged** kalles med **110** som gammel verdi og **121** som ny verdi, fordi dette sett fra lytterens perspektiv er forrige verdi den fikk vite om. En annen lytter som var registrert med prisdifferansen **5**, ville fått beskjed allerede ved første endring og da med **110** som gammel verdi og **118** som ny, men den ville ikke få beskjed om endringen fra **118** til **121**, fordi differansen da er for liten. Dersom prisen endrer seg videre til **124**, vil lytteren få beskjed og da med **118** som gammel verdi.
+
+Testkode for denne oppgaven finner du her: [patterns/observable/SmartStockTest.java](../../tests/patterns/observable/SmartStockTest.java). Original-koden (jextest) finner du her: [patterns/observable/SmartStock.jextest](../../tests/patterns/observable/SmartStock.jextest).
 
 **Exercise-panelet**
 

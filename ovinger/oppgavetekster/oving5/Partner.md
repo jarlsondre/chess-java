@@ -66,5 +66,7 @@ sammen p1 og p3, mens p2 og p4 kobles fra deres tidligere partnere.
 ## Gjøremål
 Oppgaven er (enkelt og greit) å implementere `Partner`-klassen og sjekke (f.eks. med en `main`-metode) at Partner-objektene oppfører seg som de skal.
 
+Testkode for denne oppgaven finner du her: [objectstructures/PartnerTest.java](../../tests/objectstructures/PartnerTest.java). Original-koden (jextest) finner du her: [objectstructures/Partner.jextest](../../tests/objectstructures/Partner.jextest)
+
 ## Exercise-panelet
 Bruk av Exercise-panelet er obligatorisk for denne oppgaven. Du må ha panelet åpent med `Partner.ex`-filen (`tests > objectstructures > Partner.ex`) i før du begynner med oppgaven. For mer informasjon/hjelp, se nederst på hovedsiden for Øving 5.
