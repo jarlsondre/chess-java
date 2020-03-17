@@ -27,7 +27,7 @@ Lag dette grensesnittet, og lag så en **Clerk**-klasse som implementerer det. *
 Definer en **Printer**-klasse med følgende metoder:
 
 - `void printDocument(String document, Employee employee)` - skriver documentet til konsollen og tar vare på dokumentet i **employee** sin historikk.
-- `List<String> getPrintHistory(Employee employee)` - returnerer en **List<String>** med alle dokumentene som har blitt printet av **employee** av denne printeren i rekkefølgen de har blitt printet.
+- `List<String> getPrintHistory(Employee employee)` - returnerer en **List<String>** med alle dokumentene som har blitt printet av **employee** av denne printeren i rekkefølgen de har blitt printet. Om **employee** ikke har printet noen dokumenter ved denne printeren skal en tom liste returneres.
 
 La så **Clerk** delegere **printDocument** til **Printer**. Siden **Clerk** ikke har noen andre ansatte å delegere til, vil **getResourceCount()** alltid være 1.
 
