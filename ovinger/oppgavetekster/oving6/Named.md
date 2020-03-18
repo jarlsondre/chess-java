@@ -29,6 +29,16 @@ Skriv testkode som bruker `Collections.sort`-metoden på en `ArrayList<Named>`, 
 
 Hint: For å sammenlikne to `String`-objekter kan man bruke `String`-klassens innebygde `Comparable`-metode `int compareTo(String streng2)`. Denne metoden sammenlikner en `String` med en annen alfabetisk.
 
+Testkode for oppgavene finner du her:
+- [interfaces/NamedComparatorTest.java](../../tests/interfaces/NamedComparatorTest.java),
+- [interfaces/Person1Test](../../tests/interfaces/Person1Test.java),
+- [interfaces/Person2Test](../../tests/interfaces/Person2Test.java).
+
+Originalkoden (jextest) for testen finner du her:
+- [interfaces/NamedComparator.jextest](../../tests/interfaces/NamedComparator.jextest),
+- [interfaces/Person1.jextest](../../tests/interfaces/Person1.jextest),
+- [interfaces/Person2.jextest](../../tests/interfaces/Person2.jextest).
+
 ## Exercise-panelet
 
 Bruk av Exercise-panelet er obligatorisk for denne øvingen. Du må ha panelet åpent med Named.ex-filen (tests > interfaces > Named.ex) i før du begynner med oppgaven. For mer informasjon/hjelp, se nederst på forrige side, altså hovedsiden for [Øving 6](./README.md).

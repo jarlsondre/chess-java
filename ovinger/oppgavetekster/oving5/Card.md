@@ -21,6 +21,8 @@ I mange sammenhenger vil objekter av en klasse inneholde eller "eie" objekter av
 
 Utvid `CardDeck` og lag `CardHand` som beskrevet over. Test klassene med selvlagde main-metoder og ved å kjøre JUnit-testene.
 
+Testkode for denne oppgaven finner du her: [CardTest.java](../../tests/objectstructures/CardTest.java), [CardDeckTest.java](../../tests/objectstructures/CardDeckTest.java), [CardHandTest.java](../../tests/objectstructures/CardHandTest.java). Originalkoden (jextest) finner du her: [Card.jextest](../../tests/objectstructures/Card.jextest), [CardDeck.jextest](../../tests/objectstructures/CardDeck.jextest), [CardHand.jextest](../../tests/objectstructures/CardHand.jextest).
+
 **Exercise-panelet**
 
 Bruk av Exercise-panelet er obligatorisk for denne øvingen. Du må ha panelet åpent med `Card.ex`-filen (`tests > objectstructures > Card.ex`) i før du begynner med oppgaven. For mer informasjon/hjelp, se nederst på forrige side, altså hovedsiden for [Øving 5](./README.md).

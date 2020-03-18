@@ -41,6 +41,8 @@ binaryIterator.next()    // 13.0
 binaryIterator.hasNext() // false
 ```
 
+Testkode for BinaryComputingIterator er her: [interfaces/BinaryComputingIteratorTest.java](../../tests/interfaces/BinaryComputingIteratorTest.java). Originalkoden (jextest) for testen finner du her: [interfaces/BinaryComputingIterator.jextest](../../tests/interfaces/BinaryComputingIterator.jextest)
+
 **Hjelp / mistanke om bugs**
 
 Ved spørsmål eller behov for hjelp konsulter studassen din i saltiden hans / hennes. Du kan også oppsøke andre studasser på sal eller legge ut et innlegg på Piazza.

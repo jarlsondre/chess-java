@@ -64,3 +64,5 @@ for (String s: stringGrid) {
 Rekkefølgen som en slik for-setningen går gjennom elementene på, skal være hele første rad, så hele andre rad osv. til og med siste rad.
 
 Hva slags følger får det for **StringGridImpl**? Gjør nødvendige endringer i den også, og test at det virker!
+
+Testkode for del 1 og del 2 finner du her: [interfaces/StringGridTest.java](../../tests/interfaces/StringGridTest.java). Originalkoden (jextest) for testen finner du her: [interfaces/StringGrid.jextest](../../tests/interfaces/StringGrid.jextest)
