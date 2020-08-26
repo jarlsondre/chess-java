@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="497.0" prefWidth="581.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sjakk.SjakkController">
+   <children>
+      <Pane id="pane" fx:id="pane" layoutX="50.0" layoutY="50.0" prefHeight="394.0" prefWidth="404.0" stylesheets="@gui.css" />
+      <Button layoutX="474.0" layoutY="50.0" mnemonicParsing="false" onAction="#handleStart" prefHeight="45.0" prefWidth="79.0" text="Nytt spill" />
+      <Label fx:id="checkLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="454.0" layoutY="118.0" prefHeight="30.0" prefWidth="121.0" textAlignment="CENTER">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="212.0" prefHeight="47.0" prefWidth="79.0" text="Sjakk">
+         <font>
+            <Font name="Bell MT Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="turnLabel" layoutX="175.0" layoutY="444.0" prefHeight="45.0" prefWidth="154.0" text="Hvit sin tur">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
