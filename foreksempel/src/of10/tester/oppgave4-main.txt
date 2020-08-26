@@ -1,4 +1,0 @@
-public static void main(String[] args) throws FileNotFoundException {
-	SaveHandler handler = new SaveHandler();
-	handler.load("oppgave4-eksempel");
-}

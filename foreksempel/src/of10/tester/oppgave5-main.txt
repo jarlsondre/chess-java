@@ -1,5 +1,0 @@
-public static void main(String[] args) throws FileNotFoundException {
-	SaveHandler handler = new SaveHandler();
-	Game game = handler.load("oppgave5-eksempel");
-	System.out.println(game);
-}

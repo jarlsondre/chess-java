@@ -1,5 +1,0 @@
-Slange: #24d628
-Bakke: #a26f42
-Frukt: #e5303a
-Mål: #f6ec5a
-Luft: #7bcaf2
