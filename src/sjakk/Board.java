@@ -88,7 +88,7 @@ public class Board implements Iterable<Tile> {
 		}
 	}
 
-	// funksjon for å kunne flytte en brikke
+	// funksjon for ï¿½ kunne flytte en brikke
 	public boolean movePiece(Piece piece, int newX, int newY, boolean test) {
 		boolean rookMove = false; 
 		boolean kingMove = false; 
@@ -105,16 +105,16 @@ public class Board implements Iterable<Tile> {
 			// vil sjekke om det er en bonde som skal flytte seg to fremover:
 			if (piece.getType().equals("Pawn") && (piece.getCurrentTile().getVerPos() == 2 || piece.getCurrentTile().getVerPos() == 7)) {
 				if (newY == piece.getCurrentTile().getVerPos() + 2 || newY == piece.getCurrentTile().getVerPos() - 2) {
-					// Dette betyr at denne brikken prøver å flytte seg 2 frem for første gang. 
+					// Dette betyr at denne brikken prï¿½ver ï¿½ flytte seg 2 frem for fï¿½rste gang. 
 					((Pawn) piece).setMadeDoubleForward(main.getMovesMade());
 				}
 			}
 
-			// Hvis trekket er en passant så er det en bonde som flytter seg på skrå selv om det ikke står en brikke der. 
+			// Hvis trekket er en passant sï¿½ er det en bonde som flytter seg pï¿½ skrï¿½ selv om det ikke stï¿½r en brikke der. 
 			if (piece.getType().equals("Pawn")) {
 				if (newX != piece.getCurrentTile().getHorPos() && this.getPiece(newX, newY) == null) {
 
-					// Hvis dette skjer så må trekket være en passant. I så fall må jeg fjerne brikken som står bak bonden vår der den ender opp
+					// Hvis dette skjer sï¿½ mï¿½ trekket vï¿½re en passant. I sï¿½ fall mï¿½ jeg fjerne brikken som stï¿½r bak bonden vï¿½r der den ender opp
 					enPassant = true; 
 					if (piece.getColor() == 'W') {
 						prevPiece = this.getPiece(newX, newY-1);
@@ -126,13 +126,13 @@ public class Board implements Iterable<Tile> {
 					}
 				}
 			}
-			// her vil jeg sjekke om brikken er en konge som skal gjennomføre rokade: 
+			// her vil jeg sjekke om brikken er en konge som skal gjennomfï¿½re rokade: 
 			else if (piece.getType().equals("King")) {
 				
-				// vil deretter sjekke om kongen skal flytte seg to ruter til høyre eller venstre
+				// vil deretter sjekke om kongen skal flytte seg to ruter til hï¿½yre eller venstre
 				if (newX == orgX - 2) {
 					
-					// Vil flytte tårnet som står helt til venstre til xpos 4
+					// Vil flytte tï¿½rnet som stï¿½r helt til venstre til xpos 4
 					Piece secondPiece = this.getPiece(1, orgY);
 					secondPiece.getCurrentTile().setPiece(null);
 					this.getTile(4, orgY).setPiece(secondPiece);
@@ -140,7 +140,7 @@ public class Board implements Iterable<Tile> {
 				}
 				else if (newX == orgX + 2) {
 					
-					// Vil nå flytte tårnet som står til høyre til xpos 6
+					// Vil nï¿½ flytte tï¿½rnet som stï¿½r til hï¿½yre til xpos 6
 					Piece secondPiece = this.getPiece(8, orgY);
 					secondPiece.getCurrentTile().setPiece(null);
 					this.getTile(6, orgY).setPiece(secondPiece);
@@ -150,14 +150,21 @@ public class Board implements Iterable<Tile> {
 			
 			// her skjer selve flyttingen
 			piece.getCurrentTile().setPiece(null);
-			this.getTile(newX, newY).setPiece(piece);
+			if((piece.getType().equals("Pawn") && newY == 1) || (piece.getType().equals("Pawn") && newY == 8)) {
+				Piece promoted = new Queen(this.getTile(newX,newY), piece.getColor());
+				this.getTile(newX, newY).setPiece(promoted);
+				piece = promoted;
+			}
+			else {
+				this.getTile(newX, newY).setPiece(piece);
+			}
 			main.setLastMoveEnPassant(enPassant);
 			main.setLastMoveCastled(castled);
 			
-			// Jeg må sjekke om brikken som flyttes er en konge eller et tårn:
+			// Jeg mï¿½ sjekke om brikken som flyttes er en konge eller et tï¿½rn:
 			if (piece.getType().equals("Rook")) {
 				
-				// sjekke om den ikke har blitt flyttet før
+				// sjekke om den ikke har blitt flyttet fï¿½r
 				if (!((Rook) piece).getHasMoved()) {
 					rookMove = true;
 					kingMove = false; 
@@ -166,7 +173,7 @@ public class Board implements Iterable<Tile> {
 			}
 			else if (piece.getType().equals("King")) {
 				
-				// sjekke om den ikke har blitt flytter før
+				// sjekke om den ikke har blitt flytter fï¿½r
 				if (!((King) piece).getHasMoved()) {
 					rookMove = false;
 					kingMove = true;
@@ -174,7 +181,7 @@ public class Board implements Iterable<Tile> {
 				}
 			}
 
-			// Her må jeg sjekke om kongen har endt opp i sjakk. Hvis dette er tilfellet så må jeg flytte tilbake. 
+			// Her mï¿½ jeg sjekke om kongen har endt opp i sjakk. Hvis dette er tilfellet sï¿½ mï¿½ jeg flytte tilbake. 
 			boolean returnValue = true; 
 			
 			if (kingCheck(piece.getColor())) {
@@ -213,13 +220,13 @@ public class Board implements Iterable<Tile> {
 		}
 	}
 
-	// funksjon for å sjekke om en av kongene står i sjakk
+	// funksjon for ï¿½ sjekke om en av kongene stï¿½r i sjakk
 	public boolean kingCheck(char color) {
 		Move kingPos = findKing(color);
 		for (Tile tile : this) {
 			if (tile.getPiece() != null) {
 				if (tile.getPiece().getColor() != color) {
-					// må samle opp alle trekkene som er mulige
+					// mï¿½ samle opp alle trekkene som er mulige
 					ArrayList<Move> tmp = tile.getPiece().getMoves();
 					if (tmp.contains(kingPos)) {
 						return true;
@@ -230,7 +237,7 @@ public class Board implements Iterable<Tile> {
 		return false; 
 	}
 
-	// funksjon for å sjekke om det er sjakkmatt
+	// funksjon for ï¿½ sjekke om det er sjakkmatt
 	public boolean checkMate() {
 		if (kingCheck('W')) {
 			return checkPossibleMoves('W');
@@ -241,7 +248,7 @@ public class Board implements Iterable<Tile> {
 		return false; 
 	}
 
-	// funksjon for å utføre trekk og sjekke om kongen fortsatt står i sjakk
+	// funksjon for ï¿½ utfï¿½re trekk og sjekke om kongen fortsatt stï¿½r i sjakk
 	private boolean checkPossibleMoves(char color) {
 		BoardIterator boardIterator = new BoardIterator(this);
 		while (boardIterator.hasNext()) {
@@ -250,7 +257,7 @@ public class Board implements Iterable<Tile> {
 			if (tile.getPiece() != null) {
 				if (tile.getPiece().getColor() == color) {
 
-					// må gå gjennom hvert trekk: 
+					// mï¿½ gï¿½ gjennom hvert trekk: 
 					PieceIterator pieceIterator = new PieceIterator(tile.getPiece());
 					while (pieceIterator.hasNext()) {
 
@@ -267,7 +274,7 @@ public class Board implements Iterable<Tile> {
 		return true; 
 	}
 
-	//funksjon for å finne kongen med en viss farge
+	//funksjon for ï¿½ finne kongen med en viss farge
 	public Move findKing(char color) {
 		List<Tile> kingList = new ArrayList<Tile>();
 		kingList = tileList.stream().filter(p -> p.getPiece() != null).filter(p -> p.getPiece().getType().equals("King") && p.getPiece().getColor() == color).collect(Collectors.toList());
@@ -281,7 +288,7 @@ public class Board implements Iterable<Tile> {
 		return new BoardIterator(this);
 	}
 
-	// Funksjon for å kunne printe ut brettet: 
+	// Funksjon for ï¿½ kunne printe ut brettet: 
 
 	public void printBoard() {
 		int i = 0;
@@ -307,7 +314,7 @@ public class Board implements Iterable<Tile> {
 		System.out.println("-----------W------------ \n");
 	}
 
-	// Main metode for å prøve ut litt :)
+	// Main metode for ï¿½ prï¿½ve ut litt :)
 	public static void main(String[] args) {
 
 		System.out.println('B' == 'w');

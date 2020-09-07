@@ -89,6 +89,8 @@ public class SjakkController {
 			orgTranslateX  = ((ImageView)(arg0.getSource())).getTranslateX();
 			orgTranslateY  = ((ImageView)(arg0.getSource())).getTranslateY();
 
+			Piece myPiece = currentTile.getPiece();
+
 			double newTransX = Rounder.round50(orgTranslateX);
 			double newTransY = Rounder.round50(orgTranslateY);
 
@@ -174,6 +176,14 @@ public class SjakkController {
 				((ImageView)arg0.getSource()).setTranslateX(Rounder.round50(newTransX));
 				((ImageView)arg0.getSource()).setTranslateY(Rounder.round50(newTransY));
 
+				if (myPiece.getType().equals("Pawn") && ((int) (newTransY/50)*(-1) + 8 == 8 || (int) (newTransY/50)*(-1) + 8 == 1)) {
+					String color = "white";
+					if (currentColor == 'B') {
+						color = "black";
+					}
+					Image image2 = new Image(color + "_queen.gif");
+					((ImageView)(arg0.getSource())).setImage(image2);
+				}
 				
 				// sjekker hvem sin tur det er
 				if (main.getMovesMade() % 2 == 0) {
