@@ -2,8 +2,6 @@
 
 This is the chess project I made to practice Java and JavaFX. 
 
-Missing features:
--  Promotion when a pawn reaches the end
 
 Implemented features:
 - Only legal moves allowed
@@ -14,3 +12,4 @@ Implemented features:
 - Castling
 - En Passant
 - Restarting (slightly bugged)
+- Promotion when a pawn reaches the end (auto-queen is enabled)
