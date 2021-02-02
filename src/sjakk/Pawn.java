@@ -115,7 +115,7 @@ public class Pawn extends Piece {
 		int y = getCurrentTile().getVerPos();
 
 		if (pred1.test(this)) {
-			if (getBoard().getTile(bin1.apply(x, 1), y).getPiece() != null) {
+			if (bin1.apply(x, 1) > 0 && bin1.apply(x, 1) < 9 && getBoard().getTile(bin1.apply(x, 1), y).getPiece() != null) {
 				if (getBoard().getTile(bin1.apply(x, 1), y).getPiece().getType().equals("Pawn") 
 						&& getBoard().getTile(bin1.apply(x, 1), y).getPiece().getColor() != getColor()) {
 					if (((Pawn) getBoard().getTile(bin1.apply(x, 1), y).getPiece()).getMadeDoubleForward() == 
