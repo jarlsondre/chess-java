@@ -16,3 +16,4 @@ Implemented features:
 
 Bugs:
 - If you attempt to castle but can't (because your king will be in check) then the king is moved back, but the rook actually moves. There is a disconnect between the internal board and the GUI
+- When restarting the game while it's black's turn, the game will continue to say that it is black's turn even though white has the first move. This is just a graphical bug as white is the only one that can move and after white moves the graphics will work again
